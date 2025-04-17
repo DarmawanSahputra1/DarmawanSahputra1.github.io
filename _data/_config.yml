@@ -1,17 +1,11 @@
-title: Darmawan Sahputra
-description: Website pribadi Darmawan Sahputra
-author: Darmawan Sahputra
-url: "https://darmawansahputra1.github.io"
-baseurl: ""  # HARUS kosong karena ini repo user.github.io
+title:  Home
+url:  "https://darmawansahputra1.github.io"
+ 
+baseurl:
 
 # Folder SCSS kalau kamu pakai Sass
 sass:
   sass_dir: _sass
   style: compressed
 
-# Layout kustom, jadi theme null
-theme: null
 
-# Konfigurasi build GitHub Pages
-markdown: kramdown
-permalink: pretty
