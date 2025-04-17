@@ -5,7 +5,7 @@ title: Friends
 
 <div class="container">
   <h1>Friends Page</h1>
-  <p>Berikut teman-teman saya di kelas:</p>
+  <p>Berikut nama teman-teman saya di kelas teknik informatika 1D:</p>
   <ul class="friend-list">
     <li><a href="https://ahmadfayyadh.github.io/">Ahmad Fayyadh</a></li>
     <li><a href="https://alanisamaharani.github.io/">Al Anisa Maharani</a></li>
@@ -17,7 +17,7 @@ title: Friends
     <li><a href="https://angginabilabatubara.github.io/">Anggi Sya'ban Nabila Batubara</a></li>
     <li><a href="https://balqismisyia.github.io/">Balqis Misyia</a></li>
     <li><a href="https://cutyumnaassyifa22.github.io/">Cut Yumna Assyifa</a></li>
-    <li><a href="https://darmawansahputra1.github.io/">Darmawan Saputra</a></li>
+    <li><a href="https://darmawansahputra1.github.io/">Darmawan Sahputra</a></li>
     <li><a href="https://dindaelz06.github.io/">Dinda Eliza</a></li>
     <li><a href="https://fared08.github.io/">Farid Haiqal</a></li>
     <li><a href="https://janricomaulanas.github.io/">Janrico Maulana Sofyan</a></li>
