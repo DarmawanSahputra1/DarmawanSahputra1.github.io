@@ -1,11 +1,11 @@
 title:  Home
+baseurl:  ""
 url:  "https://darmawansahputra1.github.io/"
- 
-baseurl:
 
 # Folder SCSS kalau kamu pakai Sass
 sass:
   sass_dir: _sass
   style: compressed
 
+theme: null
 
