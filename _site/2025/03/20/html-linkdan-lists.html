@@ -1,5 +1,199 @@
-<h1 id="html-link-dan-lists">HTML link dan lists</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML link dan Lists | </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
 
-<p>Penjelasan tentang link dan lists pada HTML.</p>
+        
+        <a href="/" 
+        >
+        Home
+       </a>
+        
+        <a href="/friends.html" 
+        >
+        Friends
+       </a>
+        
+        <a href="/blog.html" 
+        >
+        Blog
+       </a>
+        
+      </div>
+    </div>
+  </nav>
+    <div class="main-content">
+      <h1>HTML link dan Lists</h1>
+<p>20 Mar 2025 - </p>
 
-<p><img src="/assets/Gambar/download.png" alt="hmtl link dan list" /></p>
+<h1 id="-html-link-dan-list">📘 HTML: Link dan List</h1>
+
+<p>Penjelasan tentang apa itu Link dan List</p>
+
+<p>Panduan dasar dan lengkap mengenai penggunaan <strong>Link</strong> dan <strong>List</strong> dalam HTML untuk membuat halaman web yang terstruktur dan mudah dinavigasi.</p>
+
+<h2 id="-link-dalam-html">🔗 Link dalam HTML</h2>
+
+<h3 id="-apa-itu-link">📌 Apa itu Link?</h3>
+
+<p><strong>Link (hyperlink)</strong> adalah elemen HTML yang digunakan untuk menghubungkan antar halaman web, baik dalam satu website maupun ke situs eksternal.</p>
+
+<h3 id="️-tag-yang-digunakan">🏷️ Tag yang Digunakan</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"tujuan"</span><span class="nt">&gt;</span>Teks Link<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-atribut-penting">🧩 Atribut Penting</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Atribut</th>
+      <th>Deskripsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">href</code></td>
+      <td>Alamat atau URL tujuan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">target</code></td>
+      <td>Tempat membuka link (<code class="language-plaintext highlighter-rouge">_blank</code>, <code class="language-plaintext highlighter-rouge">_self</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td>Tooltip saat hover</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rel</code></td>
+      <td>Relasi dokumen (contoh: <code class="language-plaintext highlighter-rouge">noopener</code>, <code class="language-plaintext highlighter-rouge">noreferrer</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="-contoh-link">✅ Contoh Link</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Link internal --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"about.html"</span><span class="nt">&gt;</span>Tentang Kami<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Link eksternal --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.google.com"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener noreferrer"</span><span class="nt">&gt;</span>Kunjungi Google<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Link ke bagian tertentu di halaman --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#kontak"</span><span class="nt">&gt;</span>Lompat ke Kontak<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Elemen tujuan --&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"kontak"</span><span class="nt">&gt;</span>Kontak Kami<span class="nt">&lt;/h2&gt;</span>
+</code></pre></div></div>
+
+<h2 id="-list-dalam-html">📋 List dalam HTML</h2>
+
+<h3 id="-apa-itu-list">📌 Apa itu List?</h3>
+
+<p><strong>List (daftar)</strong> digunakan untuk menyusun informasi dalam bentuk yang rapi, bisa berurutan (numbering) atau tidak.</p>
+
+<h3 id="-jenis-jenis-list">🧱 Jenis-Jenis List</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jenis List</th>
+      <th>Tag HTML</th>
+      <th>Keterangan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ordered List</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code></td>
+      <td>Daftar dengan urutan (1, 2, 3)</td>
+    </tr>
+    <tr>
+      <td>Unordered List</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code></td>
+      <td>Daftar tanpa urutan (bullet)</td>
+    </tr>
+    <tr>
+      <td>Description List</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;dl&gt;</code></td>
+      <td>Daftar istilah dan deskripsi</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="-contoh-ordered-list">✅ Contoh Ordered List</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>HTML<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>CSS<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>JavaScript<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-contoh-unordered-list">✅ Contoh Unordered List</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Beranda<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Blog<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Kontak<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-contoh-description-list">✅ Contoh Description List</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>HTML<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Bahasa markup dasar untuk web<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt&gt;</span>CSS<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Digunakan untuk mempercantik tampilan<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-contoh-nested-list">✅ Contoh Nested List</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Frontend
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>HTML<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>CSS<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Backend
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>PHP<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Node.js<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h2 id="-tips-penggunaan">🎯 Tips Penggunaan</h2>
+
+<ul>
+  <li>Gunakan <code class="language-plaintext highlighter-rouge">target="_blank"</code> + <code class="language-plaintext highlighter-rouge">rel="noopener noreferrer"</code> untuk link eksternal agar lebih aman.</li>
+  <li>Hindari teks link seperti “klik di sini”, gunakan deskriptif.</li>
+  <li>Gunakan list untuk struktur menu, fitur, atau langkah-langkah.</li>
+  <li>Gunakan list bersarang untuk submenu atau kategori bertingkat.</li>
+</ul>
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><strong>Link (<code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>)</strong> adalah elemen penting untuk membuat navigasi antarsitus atau antarhalaman.</li>
+  <li><strong>List (<code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;dl&gt;</code>)</strong> membantu menyusun informasi secara terstruktur dan mudah dibaca.</li>
+  <li>Keduanya merupakan dasar dari struktur dan navigasi pada halaman HTML.</li>
+</ul>
+
+
+    </div>
+  </body>
+  

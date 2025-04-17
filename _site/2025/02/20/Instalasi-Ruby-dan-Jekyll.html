@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalasi Ruby dan Jekyll | </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+
+        
+        <a href="/" 
+        >
+        Home
+       </a>
+        
+        <a href="/friends.html" 
+        >
+        Friends
+       </a>
+        
+        <a href="/blog.html" 
+        >
+        Blog
+       </a>
+        
+      </div>
+    </div>
+  </nav>
+    <div class="main-content">
+      <h1>Instalasi Ruby dan Jekyll</h1>
+<p>20 Feb 2025 - </p>
+
+<h1 id="-instalasi-ruby-dan-jekyll">📘 Instalasi Ruby dan Jekyll</h1>
+
+<p>Jekyll adalah salah satu generator situs statis yang sangat populer, dan Ruby adalah bahasa pemrograman yang digunakan oleh Jekyll. Berikut adalah panduan lengkap untuk menginstal Ruby dan Jekyll di sistem Anda.</p>
+
+<hr />
+
+<h2 id="-apa-itu-ruby">🧑‍💻 Apa Itu Ruby?</h2>
+
+<p><strong>Ruby</strong> adalah bahasa pemrograman dinamis dan berorientasi objek yang digunakan dalam banyak aplikasi, termasuk Jekyll. Ruby memungkinkan Jekyll untuk menjalankan berbagai perintah untuk membangun situs web statis dengan mudah.</p>
+
+<hr />
+
+<h2 id="-apa-itu-jekyll">🧑‍💻 Apa Itu Jekyll?</h2>
+
+<p><strong>Jekyll</strong> adalah static site generator yang dibangun dengan Ruby. Jekyll memungkinkan Anda untuk membuat dan mengelola blog, portfolio, atau situs web sederhana tanpa memerlukan database. Anda cukup menulis konten dalam Markdown atau HTML, dan Jekyll akan menghasilkan situs web statis.</p>
+
+<hr />
+
+<h2 id="-persyaratan-sistem">📋 Persyaratan Sistem</h2>
+
+<p>Sebelum memulai instalasi, pastikan komputer Anda memenuhi persyaratan berikut:</p>
+
+<ul>
+  <li>Sistem Operasi: Linux, macOS, atau Windows</li>
+  <li>Ruby: Versi terbaru (atau versi yang didukung oleh Jekyll)</li>
+  <li>Bundler: Untuk mengelola dependensi Ruby</li>
+</ul>
+
+<hr />
+
+<h2 id="-langkah-1-instalasi-ruby">📦 Langkah 1: Instalasi Ruby</h2>
+
+<h3 id="️-untuk-macos">🖥️ Untuk macOS</h3>
+
+<ol>
+  <li>
+    <p><strong>Menggunakan Homebrew (rekomendasi)</strong></p>
+
+    <p>Jika Anda belum menginstal Homebrew, buka terminal dan jalankan perintah berikut untuk menginstalnya:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>    </div>
+
+    <p>Kemudian, instal Ruby menggunakan Homebrew:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Verifikasi Instalasi Ruby</strong></p>
+
+    <p>Setelah instalasi selesai, pastikan Ruby telah terinstal dengan benar:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+</code></pre></div>    </div>
+
+    <p>Anda harus melihat versi Ruby yang baru diinstal.</p>
+  </li>
+</ol>
+
+<h3 id="️-untuk-windows">🖥️ Untuk Windows</h3>
+
+<ol>
+  <li>
+    <p><strong>Unduh Ruby Installer</strong></p>
+
+    <p>Kunjungi halaman <a href="https://rubyinstaller.org/">Ruby Installer</a> dan unduh versi Ruby yang sesuai dengan sistem operasi Windows Anda.</p>
+  </li>
+  <li>
+    <p><strong>Instalasi Ruby</strong></p>
+
+    <p>Jalankan installer dan pilih opsi untuk menambahkan Ruby ke PATH selama instalasi.</p>
+  </li>
+  <li>
+    <p><strong>Verifikasi Instalasi Ruby</strong></p>
+
+    <p>Setelah instalasi selesai, buka Command Prompt atau PowerShell dan ketik:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+</code></pre></div>    </div>
+
+    <p>Anda akan melihat versi Ruby yang baru diinstal.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="-langkah-2-instalasi-jekyll">📦 Langkah 2: Instalasi Jekyll</h2>
+
+<p>Setelah Ruby terinstal dengan benar, Anda dapat melanjutkan untuk menginstal Jekyll dan Bundler.</p>
+
+<ol>
+  <li>
+    <p><strong>Instalasi Jekyll dan Bundler</strong></p>
+
+    <p>Di terminal atau command prompt, jalankan perintah berikut untuk menginstal Jekyll dan Bundler:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
+</code></pre></div>    </div>
+
+    <p>Perintah ini akan menginstal Jekyll dan Bundler, yang digunakan untuk mengelola dependensi proyek Jekyll.</p>
+  </li>
+  <li>
+    <p><strong>Verifikasi Instalasi Jekyll</strong></p>
+
+    <p>Setelah instalasi selesai, pastikan Jekyll telah terinstal dengan benar:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll <span class="nt">-v</span>
+</code></pre></div>    </div>
+
+    <p>Anda akan melihat versi Jekyll yang baru diinstal.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="️-membuat-situs-jekyll-baru">🏗️ Membuat Situs Jekyll Baru</h2>
+
+<p>Setelah Ruby dan Jekyll terinstal, Anda dapat membuat situs Jekyll baru.</p>
+
+<ol>
+  <li>
+    <p><strong>Buat Proyek Jekyll Baru</strong></p>
+
+    <p>Di terminal atau command prompt, jalankan perintah berikut untuk membuat proyek Jekyll baru:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new nama_proyek_anda
+</code></pre></div>    </div>
+
+    <p>Ini akan membuat folder proyek dengan struktur dasar situs Jekyll.</p>
+  </li>
+  <li>
+    <p><strong>Masuk ke Direktori Proyek</strong></p>
+
+    <p>Arahkan ke folder proyek yang baru dibuat:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>nama_proyek_anda
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Menjalankan Server Lokal</strong></p>
+
+    <p>Untuk melihat situs Anda secara lokal, jalankan perintah berikut:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div>    </div>
+
+    <p>Jekyll akan membangun situs dan menjalankan server lokal di alamat <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>. Anda dapat membuka browser dan melihat situs baru Anda.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="-troubleshooting">🚧 Troubleshooting</h2>
+
+<h3 id="️-masalah-umum">🛠️ Masalah Umum</h3>
+
+<ul>
+  <li>
+    <p><strong>Masalah Versi Ruby</strong>: Jika Anda mengalami masalah dengan versi Ruby yang terlalu lama, pastikan Anda menggunakan versi yang didukung oleh Jekyll. Anda bisa mengatur versi Ruby menggunakan <a href="https://github.com/rbenv/rbenv">rbenv</a> atau <a href="https://rvm.io/">RVM</a>.</p>
+  </li>
+  <li>
+    <p><strong>Masalah Dependency</strong>: Jika Anda mengalami masalah dengan dependensi, pastikan Anda menjalankan <code class="language-plaintext highlighter-rouge">bundle install</code> setelah membuat proyek baru untuk menginstal semua gem yang diperlukan.</p>
+  </li>
+  <li>
+    <p><strong>Kesalahan Server</strong>: Jika server lokal tidak berjalan, pastikan Anda menjalankan perintah <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> dari dalam direktori proyek Anda.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><strong>Ruby</strong> adalah bahasa pemrograman yang digunakan oleh Jekyll untuk membangun situs web statis.</li>
+  <li><strong>Jekyll</strong> memungkinkan pembuatan dan pengelolaan situs web statis dengan mudah, menggunakan template dan konten dalam format Markdown.</li>
+  <li>Setelah mengikuti langkah-langkah instalasi, Anda dapat membuat dan menjalankan situs web Jekyll di komputer lokal Anda.</li>
+</ul>
+
+<hr />
+
+    </div>
+  </body>
+  

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML: Layout dan Navigation | </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+
+        
+        <a href="/" 
+        >
+        Home
+       </a>
+        
+        <a href="/friends.html" 
+        >
+        Friends
+       </a>
+        
+        <a href="/blog.html" 
+        >
+        Blog
+       </a>
+        
+      </div>
+    </div>
+  </nav>
+    <div class="main-content">
+      <h1>HTML: Layout dan Navigation</h1>
+<p>13 Mar 2025 - </p>
+
+<h1 id="-html-layout-dan-navigasi">📘 HTML: Layout dan Navigasi</h1>
+
+<p>Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem navigasi menggunakan elemen-elemen dasar HTML.</p>
+
+<hr />
+
+<h2 id="-apa-itu-layout-dalam-html">🧱 Apa Itu Layout dalam HTML?</h2>
+
+<p><strong>Layout</strong> adalah struktur atau kerangka utama dari sebuah halaman web. Layout menentukan bagaimana elemen-elemen seperti header, konten, sidebar, dan footer ditampilkan dan diatur di dalam halaman.</p>
+
+<h3 id="-elemen-elemen-layout-umum">📌 Elemen-Elemen Layout Umum</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemen</th>
+      <th>Fungsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;header&gt;</code></td>
+      <td>Bagian atas halaman (judul, logo, dll.)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code></td>
+      <td>Menu navigasi</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;main&gt;</code></td>
+      <td>Konten utama halaman</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;section&gt;</code></td>
+      <td>Seksi konten (bab/subbab)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;article&gt;</code></td>
+      <td>Konten independen seperti post atau berita</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;aside&gt;</code></td>
+      <td>Konten tambahan (sidebar, iklan)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;footer&gt;</code></td>
+      <td>Bagian bawah halaman (hak cipta, kontak)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code></td>
+      <td>Pembungkus (container) umum</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="-contoh-layout-sederhana">✅ Contoh Layout Sederhana</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"id"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Contoh Layout<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Website Saya<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+
+  <span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;</span>Beranda<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"about.html"</span><span class="nt">&gt;</span>Tentang<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"kontak.html"</span><span class="nt">&gt;</span>Kontak<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+
+  <span class="nt">&lt;main&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Selamat Datang<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Ini adalah halaman utama.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/main&gt;</span>
+
+  <span class="nt">&lt;aside&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Berita Terkini<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Informasi tambahan atau iklan di sini.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/aside&gt;</span>
+
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;p&gt;</span><span class="ni">&amp;copy;</span> 2025 Website Saya<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-apa-itu-navigasi-dalam-html">🧭 Apa Itu Navigasi dalam HTML?</h2>
+
+<p><strong>Navigasi (navigation)</strong> adalah bagian dari halaman web yang memungkinkan pengguna berpindah antarhalaman atau antarbagian dalam halaman.</p>
+
+<h3 id="️-elemen-untuk-navigasi">🏷️ Elemen untuk Navigasi</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> digunakan untuk membungkus menu navigasi utama.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> digunakan untuk membuat link ke halaman atau bagian tertentu.</li>
+</ul>
+
+<hr />
+
+<h3 id="-contoh-menu-navigasi">✅ Contoh Menu Navigasi</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;</span>Beranda<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"layanan.html"</span><span class="nt">&gt;</span>Layanan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"kontak.html"</span><span class="nt">&gt;</span>Kontak<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-navigasi-ke-bagian-halaman-scroll-internal">✅ Navigasi ke Bagian Halaman (Scroll Internal)</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#profil"</span><span class="nt">&gt;</span>Profil<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#layanan"</span><span class="nt">&gt;</span>Layanan<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#kontak"</span><span class="nt">&gt;</span>Kontak<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"profil"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Profil<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Deskripsi tentang kami...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"layanan"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Layanan<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Layanan kami meliputi...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"kontak"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Kontak<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Hubungi kami di...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-tips-praktis">🎯 Tips Praktis</h2>
+
+<ul>
+  <li>Gunakan <strong>elemen semantik</strong> seperti <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code> untuk membantu struktur dan SEO.</li>
+  <li>Gunakan CSS (di luar HTML) untuk mengatur <strong>layout grid/flexbox</strong> dan membuat tampilan responsive.</li>
+  <li>Pastikan setiap navigasi menggunakan teks yang jelas dan mudah dimengerti.</li>
+  <li>Gunakan <code class="language-plaintext highlighter-rouge">aria-label</code> pada elemen navigasi jika perlu untuk aksesibilitas.</li>
+</ul>
+
+<hr />
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><strong>Layout HTML</strong> membantu menyusun kerangka halaman agar rapi dan konsisten.</li>
+  <li><strong>Navigasi HTML</strong> memungkinkan pengguna berpindah dari satu halaman ke halaman lain atau bagian tertentu dalam halaman.</li>
+  <li>Elemen semantik HTML mempermudah pengembangan dan meningkatkan pengalaman pengguna serta SEO.</li>
+</ul>
+
+<hr />
+
+
+    </div>
+  </body>
+  
