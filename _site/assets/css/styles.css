@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* === Reset & Base === */
 * {
   margin: 0;
@@ -9,12 +10,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #1B2A41;
   color: #EAEAEA;
+  line-height: 1.7;
 }
 
-/* === Sidebar Navigation === */
+/* === Navbar Sidebar === */
 .navbar {
   background-color: #1e1e2f;
-  padding: 30px 20px;
+  padding: 20px;
   width: 220px;
   min-height: 100vh;
   position: fixed;
@@ -22,83 +24,239 @@ body {
   left: 0;
 }
 
-.navbar h2 {
-  color: #F9DB6D;
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
 .nav-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .navbar a {
   color: #f9d923;
   text-decoration: none;
-  font-size: 16px;
-  padding: 8px;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.current {
   background-color: #f9d923;
   color: #1e1e2f;
+  font-weight: bold;
 }
 
-/* === Main Content === */
+/* === Main Content Shift === */
 .main-content {
   margin-left: 240px;
   padding: 40px 20px;
 }
 
-/* === Blog Container === */
-.blog-container {
-  max-width: 800px;
+/* === Container === */
+.container {
+  max-width: 900px;
   margin: 0 auto;
-}
-
-.blog-container h1 {
-  font-size: 32px;
-  color: #F9DB6D;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-/* === Post List === */
-.post-list {
-  list-style: none;
-}
-
-.post-list li {
+  padding: 40px;
   background-color: #324A5F;
-  padding: 16px 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
 }
 
-.post-list li:hover {
-  transform: translateY(-3px);
+.blog-container {
+  max-width: 1000px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
 }
 
-.post-list a {
-  color: #F9DB6D;
-  font-size: 18px;
+/* === Blog Content === */
+.blog-container h1 {
+  font-size: 2rem;
+  color: #f9d923;
+  margin-bottom: 10px;
+}
+
+.blog-container h2,
+.blog-container h3 {
+  color: #00A6A6;
+  margin-top: 30px;
+}
+
+.blog-container p {
+  margin-bottom: 1em;
+}
+
+.blog-container ul,
+.blog-container ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.blog-container li {
+  margin-bottom: 0.5em;
+}
+
+.blog-container a {
+  color: #f9d923;
   text-decoration: none;
 }
 
-.post-list .date {
-  display: block;
-  color: #bbb;
-  font-size: 14px;
-  margin-top: 6px;
+.blog-container a:hover {
+  text-decoration: underline;
 }
 
-/* === Responsive === */
+.blog-container code {
+  background-color: #2c3e50;
+  color: #f9d923;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+.blog-container pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+}
+
+.blog-container blockquote {
+  border-left: 4px solid #00A6A6;
+  background-color: #2a3f55;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.blog-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.blog-container th,
+.blog-container td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* === Heading Styles === */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #F9DB6D;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #00A6A6;
+  border-left: 5px solid #F9DB6D;
+  padding-left: 12px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* === Info Section & Lists === */
+.info-section {
+  margin-bottom: 35px;
+}
+
+ul {
+  margin-left: 25px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #F9DB6D;
+  font-size: 14px;
+}
+
+/* === Contact Section === */
+.contact-info {
+  background-color: #2C3E50;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #00A6A6;
+}
+
+/* === Global Anchor === */
+a {
+  color: #F9DB6D;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: #00A6A6;
+  text-decoration: underline;
+}
+
+/* === Main Menu Horizontal === */
+.main-menu {
+  background: linear-gradient(90deg, #1B2A41, #2A3D55);
+  padding: 20px 40px;
+  border-bottom: 3px solid #00A6A6;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.main-menu li a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: #00A6A6;
+  left: 0;
+  bottom: 5px;
+  transition: width 0.3s ease;
+}
+
+.main-menu li a:hover {
+  color: #ffffff;
+  background-color: #00A6A6;
+}
+
+.main-menu li a:hover::after {
+  width: 100%;
+}
+
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .navbar {
     position: relative;
@@ -107,7 +265,23 @@ body {
   }
   .main-content {
     margin-left: 0;
-    padding: 20px;
+  }
+  .main-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p, ul li {
+    font-size: 16px;
+  }
+  .container {
+    padding: 25px;
   }
 }
 
