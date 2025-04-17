@@ -8,7 +8,7 @@ date: 2025-03-13
 
 Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem navigasi menggunakan elemen-elemen dasar HTML.
 
----
+
 
 ## 🧱 Apa Itu Layout dalam HTML?
 
@@ -27,7 +27,7 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 | `<footer>` | Bagian bawah halaman (hak cipta, kontak) |
 | `<div>` | Pembungkus (container) umum |
 
----
+
 
 ### ✅ Contoh Layout Sederhana
 
@@ -70,7 +70,7 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 </html>
 ```
 
----
+
 
 ## 🧭 Apa Itu Navigasi dalam HTML?
 
@@ -81,7 +81,7 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 - `<nav>` digunakan untuk membungkus menu navigasi utama.
 - `<a>` digunakan untuk membuat link ke halaman atau bagian tertentu.
 
----
+
 
 ### ✅ Contoh Menu Navigasi
 
@@ -95,7 +95,7 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 </nav>
 ```
 
----
+
 
 ### ✅ Navigasi ke Bagian Halaman (Scroll Internal)
 
@@ -122,7 +122,6 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 </section>
 ```
 
----
 
 ## 🎯 Tips Praktis
 
@@ -131,7 +130,6 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 - Pastikan setiap navigasi menggunakan teks yang jelas dan mudah dimengerti.
 - Gunakan `aria-label` pada elemen navigasi jika perlu untuk aksesibilitas.
 
----
 
 ## ✅ Kesimpulan
 
@@ -139,5 +137,4 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
 - **Navigasi HTML** memungkinkan pengguna berpindah dari satu halaman ke halaman lain atau bagian tertentu dalam halaman.
 - Elemen semantik HTML mempermudah pengembangan dan meningkatkan pengalaman pengguna serta SEO.
 
----
 

@@ -8,7 +8,7 @@ date: 2025-03-06
 
 Dalam pengembangan konten web dan dokumentasi, **Markdown** dan **HTML** adalah dua format yang paling umum digunakan untuk menulis dan menyusun struktur dokumen. Berikut adalah penjelasan lengkap dan perbandingan keduanya.
 
----
+
 
 ## 🧾 Apa Itu Markdown?
 
@@ -36,7 +36,7 @@ Dalam pengembangan konten web dan dokumentasi, **Markdown** dan **HTML** adalah 
 [Link ke Google](https://www.google.com)
 ```
 
----
+
 
 ## 🧱 Apa Itu HTML?
 
@@ -77,7 +77,7 @@ Dalam pengembangan konten web dan dokumentasi, **Markdown** dan **HTML** adalah 
 | Dukungan atribut | Minim | Lengkap (title, class, id, dll) |
 | Visual | Tidak bisa styling langsung | Bisa dengan CSS |
 
----
+
 
 ## 🧩 Penggunaan Bersama
 
@@ -96,7 +96,7 @@ Markdown dan HTML bisa **digabung** dalam satu dokumen Markdown. HTML akan tetap
 [Klik di sini untuk melihat lebih lanjut](produk.html)
 ```
 
----
+
 
 ## ✅ Kapan Menggunakan Markdown vs HTML?
 
@@ -107,7 +107,7 @@ Markdown dan HTML bisa **digabung** dalam satu dokumen Markdown. HTML akan tetap
 | Fokus pada konten, bukan desain | Perlu elemen dengan atribut khusus |
 | Kolaborasi di GitHub | Membangun aplikasi web dinamis |
 
----
+
 
 ## 📌 Kesimpulan
 

@@ -54,7 +54,7 @@ body {
 
 /* === Container === */
 .container {
-  max-width: 900px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 40px;
   background-color: #324A5F;
@@ -64,7 +64,7 @@ body {
 }
 
 .blog-container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 60px auto 40px;
   padding: 0 20px;
 }
@@ -144,6 +144,9 @@ body {
   text-align: left;
 }
 
+.blog-post-title{
+  display:none;
+}
 /* === Heading Styles === */
 h1 {
   text-align: center;
@@ -163,6 +166,40 @@ h2 {
 p {
   font-size: 18px;
   margin-bottom: 15px;
+}
+
+/* === Friend List Section === */
+.friend-list {
+  list-style-type: none; /* Menghapus bullet points pada list */
+  padding: 0;
+
+  li {
+    background-color: #2a3f55; /* Latar belakang kotak teman */
+    margin-bottom: 10px; /* Memberikan jarak antar kotak */
+    padding: 15px; /* Memberikan padding di dalam kotak */
+    border-radius: 8px; /* Membuat sudut kotak lebih bulat */
+    color: #f9d923; /* Warna teks */
+    font-size: 18px; /* Ukuran teks */
+    font-weight: bold; /* Menebalkan font */
+    transition: background-color 0.3s ease; /* Efek saat hover */
+
+    &:hover {
+      background-color: #00A6A6; /* Mengubah warna latar belakang saat hover */
+      color: #1e1e2f; /* Mengubah warna teks saat hover */
+    }
+
+    a {
+      display: block; /* Agar nama teman tampil dalam baris terpisah */
+      font-size: 18px;
+      color: #f9d923;
+      text-decoration: none;
+
+      &:hover {
+        color: #1e1e2f;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 /* === Info Section & Lists === */

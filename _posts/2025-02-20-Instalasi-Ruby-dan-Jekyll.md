@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: posts
 title: "Instalasi Ruby dan Jekyll"
 date: 2025-02-20
 ---
+
+
 
 # 📘 Instalasi Ruby dan Jekyll
 
 Jekyll adalah salah satu generator situs statis yang sangat populer, dan Ruby adalah bahasa pemrograman yang digunakan oleh Jekyll. Berikut adalah panduan lengkap untuk menginstal Ruby dan Jekyll di sistem Anda.
 
----
+
 
 ## 🧑‍💻 Apa Itu Ruby?
 
 **Ruby** adalah bahasa pemrograman dinamis dan berorientasi objek yang digunakan dalam banyak aplikasi, termasuk Jekyll. Ruby memungkinkan Jekyll untuk menjalankan berbagai perintah untuk membangun situs web statis dengan mudah.
 
----
+
 
 ## 🧑‍💻 Apa Itu Jekyll?
 
 **Jekyll** adalah static site generator yang dibangun dengan Ruby. Jekyll memungkinkan Anda untuk membuat dan mengelola blog, portfolio, atau situs web sederhana tanpa memerlukan database. Anda cukup menulis konten dalam Markdown atau HTML, dan Jekyll akan menghasilkan situs web statis.
 
----
+
 
 ## 📋 Persyaratan Sistem
 
@@ -30,7 +32,7 @@ Sebelum memulai instalasi, pastikan komputer Anda memenuhi persyaratan berikut:
 - Ruby: Versi terbaru (atau versi yang didukung oleh Jekyll)
 - Bundler: Untuk mengelola dependensi Ruby
 
----
+
 
 ## 📦 Langkah 1: Instalasi Ruby
 
@@ -80,7 +82,7 @@ Sebelum memulai instalasi, pastikan komputer Anda memenuhi persyaratan berikut:
 
    Anda akan melihat versi Ruby yang baru diinstal.
 
----
+
 
 ## 📦 Langkah 2: Instalasi Jekyll
 
@@ -106,7 +108,7 @@ Setelah Ruby terinstal dengan benar, Anda dapat melanjutkan untuk menginstal Jek
 
    Anda akan melihat versi Jekyll yang baru diinstal.
 
----
+
 
 ## 🏗️ Membuat Situs Jekyll Baru
 
@@ -140,7 +142,7 @@ Setelah Ruby dan Jekyll terinstal, Anda dapat membuat situs Jekyll baru.
 
    Jekyll akan membangun situs dan menjalankan server lokal di alamat `http://localhost:4000`. Anda dapat membuka browser dan melihat situs baru Anda.
 
----
+
 
 ## 🚧 Troubleshooting
 
@@ -152,7 +154,7 @@ Setelah Ruby dan Jekyll terinstal, Anda dapat membuat situs Jekyll baru.
 
 - **Kesalahan Server**: Jika server lokal tidak berjalan, pastikan Anda menjalankan perintah `bundle exec jekyll serve` dari dalam direktori proyek Anda.
 
----
+
 
 ## ✅ Kesimpulan
 
@@ -160,4 +162,4 @@ Setelah Ruby dan Jekyll terinstal, Anda dapat membuat situs Jekyll baru.
 - **Jekyll** memungkinkan pembuatan dan pengelolaan situs web statis dengan mudah, menggunakan template dan konten dalam format Markdown.
 - Setelah mengikuti langkah-langkah instalasi, Anda dapat membuat dan menjalankan situs web Jekyll di komputer lokal Anda.
 
----
+
