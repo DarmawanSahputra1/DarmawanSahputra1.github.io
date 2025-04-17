@@ -46,7 +46,7 @@ Pelajari cara menyusun tata letak halaman web (layout) dan membuat sistem naviga
   <nav>
     <ul>
       <li><a href="index.html">Beranda</a></li>
-      <li><a href="about.html">Tentang</a></li>
+      <li><a href="about.html">Tentang saya</a></li>
       <li><a href="kontak.html">Kontak</a></li>
     </ul>
   </nav>

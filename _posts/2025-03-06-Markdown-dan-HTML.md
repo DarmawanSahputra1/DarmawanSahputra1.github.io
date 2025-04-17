@@ -81,7 +81,7 @@ Dalam pengembangan konten web dan dokumentasi, **Markdown** dan **HTML** adalah 
 
 ## 🧩 Penggunaan Bersama
 
-Markdown dan HTML bisa **digabung** dalam satu dokumen Markdown. HTML akan tetap dirender dalam sebagian besar parser Markdown seperti GitHub, Jekyll, dan VS Code.
+Markdown dan HTML bisa **digabung** dalam satu dokumen Markdown. HTML akan tetap dirender dalam sebagian besar parser Markdown seperti GitHub, Jekyll, dan VS Code mantap.
 
 ### ✨ Contoh Gabungan Markdown + HTML
 

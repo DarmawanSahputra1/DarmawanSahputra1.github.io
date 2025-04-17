@@ -35,7 +35,7 @@ Panduan dasar dan lengkap mengenai penggunaan **Link** dan **List** dalam HTML u
 
 ```html
 <!-- Link internal -->
-<a href="about.html">Tentang Kami</a>
+<a href="about.html">Tentang saya</a>
 
 <!-- Link eksternal -->
 <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Kunjungi Google</a>
