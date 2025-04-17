@@ -6,7 +6,7 @@ date: 2025-02-20
 
 # 📘 Instalasi Ruby dan Jekyll
 
-jJekyll adalah salah satu generator situs statis yang sangat populer, dan Ruby adalah bahasa pemrograman yang digunakan oleh Jekyll. Berikut adalah panduan lengkap untuk menginstal Ruby dan Jekyll di sistem Anda.
+Jekyll adalah salah satu generator situs statis yang sangat populer, dan Ruby adalah bahasa pemrograman yang digunakan oleh Jekyll. Berikut adalah panduan lengkap untuk menginstal Ruby dan Jekyll di sistem Anda.
 
 ---
 
