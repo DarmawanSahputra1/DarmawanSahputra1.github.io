@@ -1,13 +1,14 @@
 <nav class="navbar">
-    <div class="nav-container">
+  <div class="nav-container">
 
-        {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" 
-        {% if page.url == item.link %}class="current" aria-current="page"{% endif %}>
-        {{ item.name }}
-       </a>
-        {% endfor %}
-      </div>
+    <div class="logo">Workshop Web Dasar</div>
+
+    <div class="nav-links">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+          {{ item.name }}
+        </a>
+      {% endfor %}
     </div>
-  </nav>
-  {% include navigation.html %}
+  </div>
+</nav>
