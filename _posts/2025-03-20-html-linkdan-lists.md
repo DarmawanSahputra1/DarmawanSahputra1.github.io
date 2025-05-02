@@ -48,7 +48,6 @@ Panduan dasar dan lengkap mengenai penggunaan **Link** dan **List** dalam HTML u
 ```
 
 
-
 ## 📋 List dalam HTML
 
 ### 📌 Apa itu List?
@@ -62,7 +61,6 @@ Panduan dasar dan lengkap mengenai penggunaan **Link** dan **List** dalam HTML u
 | Ordered List | `<ol>` | Daftar dengan urutan (1, 2, 3) |
 | Unordered List | `<ul>` | Daftar tanpa urutan (bullet) |
 | Description List | `<dl>` | Daftar istilah dan deskripsi |
-
 
 
 ### ✅ Contoh Ordered List

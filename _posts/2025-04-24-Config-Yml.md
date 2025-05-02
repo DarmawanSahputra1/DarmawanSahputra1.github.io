@@ -92,8 +92,6 @@ collections:
 jekyll serve --config _config.yml,_config_dev.yml
 ```
 
-
-
 ## ✅ Kesimpulan
 
 * `_config.yml` adalah jantung dari konfigurasi situs Jekyll.
