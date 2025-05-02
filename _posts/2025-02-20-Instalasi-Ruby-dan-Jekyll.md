@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "Instalasi Ruby dan Jekyll"
 date: 2025-02-20
 ---
