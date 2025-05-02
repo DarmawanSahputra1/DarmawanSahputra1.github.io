@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengenal dan Mengatur _config.yml pada Jekyll</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+   <!-- favicon -->
+   <link rel="icon" href="/assets/images/favicon.icn">
+
+   <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+
+
+    <!--plugins-->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mengenal dan Mengatur _config.yml pada Jekyll</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Mengenal dan Mengatur _config.yml pada Jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="⚙️ Mengenal dan Mengatur _config.yml pada Jekyll" />
+<meta property="og:description" content="⚙️ Mengenal dan Mengatur _config.yml pada Jekyll" />
+<link rel="canonical" href="http://localhost:4000/2025/04/24/Config-Yml.html" />
+<meta property="og:url" content="http://localhost:4000/2025/04/24/Config-Yml.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-24T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mengenal dan Mengatur _config.yml pada Jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-24T00:00:00+07:00","datePublished":"2025-04-24T00:00:00+07:00","description":"⚙️ Mengenal dan Mengatur _config.yml pada Jekyll","headline":"Mengenal dan Mengatur _config.yml pada Jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/04/24/Config-Yml.html"},"url":"http://localhost:4000/2025/04/24/Config-Yml.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">Workshop Web Dasar</div>
+
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+  </div>
+</nav>
+    <main class="blog-container">
+  <h1 class="blog-post-title">Mengenal dan Mengatur _config.yml pada Jekyll</h1>
+  <p>24 Apr 2025 </p>
+
+  <h1 id="️-mengenal-dan-mengatur-_configyml-pada-jekyll">⚙️ Mengenal dan Mengatur <code class="language-plaintext highlighter-rouge">_config.yml</code> pada Jekyll</h1>
+
+<p>File <code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file konfigurasi utama dalam proyek Jekyll. File ini digunakan untuk menyimpan pengaturan global yang akan digunakan di seluruh situs Anda, seperti nama situs, URL, layout default, plugin, dan sebagainya.</p>
+
+<p>Dengan memahami cara kerja dan struktur file ini, Anda bisa mengatur perilaku situs Jekyll Anda dengan lebih mudah dan konsisten.</p>
+
+<h2 id="-apa-itu-_configyml">📁 Apa Itu <code class="language-plaintext highlighter-rouge">_config.yml</code>?</h2>
+
+<p><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file dalam format YAML (YAML Ain’t Markup Language) yang digunakan Jekyll untuk:</p>
+
+<ul>
+  <li>Mengatur metadata situs seperti judul, deskripsi, dan URL.</li>
+  <li>Mengonfigurasi permalink, koleksi, pagination, dan lain-lain.</li>
+  <li>Mengaktifkan plugin atau fitur tambahan.</li>
+  <li>Menentukan pengaturan build dan deployment.</li>
+</ul>
+
+<p>Jekyll secara otomatis membaca file ini saat membangun situs Anda.</p>
+
+<h2 id="-contoh-struktur-dasar-_configyml">📝 Contoh Struktur Dasar <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Blog</span><span class="nv"> </span><span class="s">Saya"</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Kumpulan</span><span class="nv"> </span><span class="s">tulisan</span><span class="nv"> </span><span class="s">tentang</span><span class="nv"> </span><span class="s">teknologi</span><span class="nv"> </span><span class="s">dan</span><span class="nv"> </span><span class="s">pemrograman"</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># jika situs berada di subfolder, contoh "/blog"</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://namadomain.com"</span> <span class="c1"># ganti dengan URL situs Anda</span>
+
+<span class="na">author</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Nama</span><span class="nv"> </span><span class="s">Anda"</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">nama@contoh.com"</span>
+
+<span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
+
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:categories/:title/</span>
+
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div></div>
+
+<h2 id="-penjelasan-elemen-konfigurasi">🔍 Penjelasan Elemen Konfigurasi</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kunci</th>
+      <th>Fungsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td>Judul situs. Muncul di tag <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> dan halaman depan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td>Deskripsi singkat situs Anda. Digunakan oleh plugin SEO.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">baseurl</code></td>
+      <td>URL basis jika situs Anda berada di subdirektori.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td>URL utama situs Anda.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">author</code></td>
+      <td>Informasi tentang penulis situs.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">theme</code></td>
+      <td>Tema Jekyll yang digunakan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
+      <td>Menentukan format URL untuk halaman/postingan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plugins</code></td>
+      <td>Plugin tambahan yang digunakan untuk memperluas fungsi situs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-contoh-lain-konfigurasi-lanjutan">🧪 Contoh Lain Konfigurasi Lanjutan</h2>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/page:num/"</span>
+
+<span class="na">collections</span><span class="pi">:</span>
+  <span class="na">tutorials</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/tutorials/:path/</span>
+</code></pre></div></div>
+
+<h3 id="penjelasan-tambahan">Penjelasan Tambahan:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">markdown</code>: Menentukan engine Markdown yang digunakan (<code class="language-plaintext highlighter-rouge">kramdown</code> adalah default).</li>
+  <li><code class="language-plaintext highlighter-rouge">paginate</code>: Mengaktifkan pagination untuk posting blog.</li>
+  <li><code class="language-plaintext highlighter-rouge">collections</code>: Menambah koleksi khusus seperti <code class="language-plaintext highlighter-rouge">tutorials</code>.</li>
+</ul>
+
+<h2 id="-tips-penting">💡 Tips Penting</h2>
+
+<ul>
+  <li>YAML sangat peka terhadap indentasi. Gunakan spasi, <strong>bukan tab</strong>.</li>
+  <li>Anda bisa memiliki lebih dari satu file konfigurasi dan menggabungkannya saat build:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve <span class="nt">--config</span> _config.yml,_config_dev.yml
+</code></pre></div></div>
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah jantung dari konfigurasi situs Jekyll.</li>
+  <li>Anda dapat menyesuaikan banyak aspek situs melalui file ini: dari nama situs hingga perilaku URL.</li>
+  <li>Memahami struktur dan cara kerja YAML sangat membantu dalam menghindari kesalahan saat build.</li>
+</ul>
+
+
+</main>
+
+  </body>
+</html>
+  
+
