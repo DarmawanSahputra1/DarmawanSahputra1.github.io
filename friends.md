@@ -5,7 +5,7 @@ title: Friends
 
 <div class="container">
   <h1>Friends Page</h1>
-  <p>Berikut nama teman-teman saya di kelas teknik informatika 1D:</p>
+  <p>Berikut nama teman-teman saya di kelas :</p>
   <ul class="friend-list">
     <li><a href="https://ahmadfayyadh.github.io/">Ahmad Fayyadh</a></li>
     <li><a href="https://alanisamaharani.github.io/">Al Anisa Maharani</a></li>
