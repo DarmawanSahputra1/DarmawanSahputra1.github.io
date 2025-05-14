@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menggunakan SASS dan SCSS di Jekyll</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+          <!-- favicon -->
+   <link rel="icon" href="/assets/images/favicon.icn">
+
+          <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Menggunakan SASS dan SCSS di Jekyll</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Menggunakan SASS dan SCSS di Jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🎨 Menggunakan SASS dan SCSS di Jekyll" />
+<meta property="og:description" content="🎨 Menggunakan SASS dan SCSS di Jekyll" />
+<link rel="canonical" href="http://localhost:4000/2025/02/22/SASS-dan-SCSS.html" />
+<meta property="og:url" content="http://localhost:4000/2025/02/22/SASS-dan-SCSS.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-22T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Menggunakan SASS dan SCSS di Jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-22T00:00:00+07:00","datePublished":"2025-02-22T00:00:00+07:00","description":"🎨 Menggunakan SASS dan SCSS di Jekyll","headline":"Menggunakan SASS dan SCSS di Jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/02/22/SASS-dan-SCSS.html"},"url":"http://localhost:4000/2025/02/22/SASS-dan-SCSS.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">Workshop Web Dasar</div>
+
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+  </div>
+</nav>
+
+    <main class="blog-container">
+  <h1 class="blog-post-title">Menggunakan SASS dan SCSS di Jekyll</h1>
+  <p>22 Feb 2025 </p>
+
+  <h1 id="-menggunakan-sass-dan-scss-di-jekyll">🎨 Menggunakan SASS dan SCSS di Jekyll</h1>
+
+<p>Jekyll secara bawaan mendukung <strong>SASS/SCSS</strong>, yaitu ekstensi dari CSS yang memungkinkan penggunaan variabel, nested rules, mixins, dan banyak lagi. Ini sangat berguna untuk membuat gaya situs yang lebih rapi dan modular.</p>
+
+<h2 id="-apa-itu-sass-dan-scss">💡 Apa Itu SASS dan SCSS?</h2>
+
+<ul>
+  <li><strong>SASS (Syntactically Awesome Stylesheets)</strong> adalah preprocessor CSS yang memperkenalkan sintaks yang lebih efisien dan fitur tambahan.</li>
+  <li><strong>SCSS</strong> adalah varian dari SASS yang menggunakan sintaks mirip CSS. Ini adalah format yang lebih umum dan mudah diadopsi.</li>
+</ul>
+
+<p>Contoh SCSS:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#3498db</span><span class="p">;</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
+
+  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="-struktur-file-scss-di-jekyll">📁 Struktur File SCSS di Jekyll</h2>
+
+<p>Jekyll mengharapkan file SCSS berada di dalam folder bernama <code class="language-plaintext highlighter-rouge">_sass</code>, dan satu file utama SCSS (biasanya <code class="language-plaintext highlighter-rouge">main.scss</code>) berada di dalam folder <code class="language-plaintext highlighter-rouge">assets/css/</code>.</p>
+
+<p><strong>Contoh struktur:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── _sass/
+│   └── _variables.scss
+├── assets/
+│   └── css/
+│       └── main.scss
+</code></pre></div></div>
+
+<h2 id="-menggunakan-scss-dalam-proyek-jekyll">📦 Menggunakan SCSS dalam Proyek Jekyll</h2>
+
+<ol>
+  <li>
+    <p><strong>Buat folder <code class="language-plaintext highlighter-rouge">_sass/</code></strong> di root proyek Anda.</p>
+  </li>
+  <li>
+    <p><strong>Tambahkan file partial SCSS</strong>, misalnya <code class="language-plaintext highlighter-rouge">_variables.scss</code>:</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$bg-color</span><span class="p">:</span> <span class="mh">#f4f4f4</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Buat file utama <code class="language-plaintext highlighter-rouge">main.scss</code> di <code class="language-plaintext highlighter-rouge">assets/css/</code></strong>:</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span>
+<span class="nt">---</span>
+<span class="o">@</span><span class="nt">import</span> <span class="s2">"variables"</span><span class="p">;</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$bg-color</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <blockquote>
+      <p>Baris <code class="language-plaintext highlighter-rouge">---</code> di atas wajib untuk memberi tahu Jekyll memproses file ini melalui Liquid dan SASS.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Tambahkan ke layout HTML Anda:</strong></p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="️-konfigurasi-di-_configyml">⚙️ Konfigurasi di <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
+
+<p>Jika Anda ingin mengatur output CSS dari SCSS, tambahkan ini di <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sass</span><span class="pi">:</span>
+  <span class="na">style</span><span class="pi">:</span> <span class="s">compressed</span> <span class="c1"># atau nested, expanded, compact</span>
+</code></pre></div></div>
+
+<p>Nilai <code class="language-plaintext highlighter-rouge">compressed</code> akan menghasilkan file CSS yang lebih kecil.</p>
+
+<h2 id="-tips-penggunaan">🧪 Tips Penggunaan</h2>
+
+<ul>
+  <li>Gunakan <strong>partial</strong> (file SCSS yang diawali dengan <code class="language-plaintext highlighter-rouge">_</code>) untuk membagi-bagi style berdasarkan komponen.</li>
+  <li>Hindari menaruh CSS di dalam HTML; SCSS lebih terstruktur dan mudah dipelihara.</li>
+  <li>Manfaatkan fitur seperti <strong>mixin</strong>, <strong>extend</strong>, dan <strong>functions</strong> untuk membuat style yang reusable.</li>
+</ul>
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li>Jekyll mendukung SCSS secara bawaan tanpa konfigurasi tambahan.</li>
+  <li>SCSS membantu Anda menulis CSS yang lebih bersih, modular, dan mudah dikelola.</li>
+  <li>Manfaatkan struktur file <code class="language-plaintext highlighter-rouge">_sass</code> dan <code class="language-plaintext highlighter-rouge">assets/css</code> untuk mengatur style Anda dengan baik.</li>
+</ul>
+
+<p>```</p>
+
+</main>
+
+
+
+  </body>
+</html>
+  
+

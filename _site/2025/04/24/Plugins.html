@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengenal dan Menggunakan Plugins di Jekyll</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+          <!-- favicon -->
+   <link rel="icon" href="/assets/images/favicon.icn">
+
+          <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mengenal dan Menggunakan Plugins di Jekyll</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Mengenal dan Menggunakan Plugins di Jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🔌 Mengenal dan Menggunakan Plugins di Jekyll" />
+<meta property="og:description" content="🔌 Mengenal dan Menggunakan Plugins di Jekyll" />
+<link rel="canonical" href="http://localhost:4000/2025/04/24/Plugins.html" />
+<meta property="og:url" content="http://localhost:4000/2025/04/24/Plugins.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-24T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mengenal dan Menggunakan Plugins di Jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-24T00:00:00+07:00","datePublished":"2025-04-24T00:00:00+07:00","description":"🔌 Mengenal dan Menggunakan Plugins di Jekyll","headline":"Mengenal dan Menggunakan Plugins di Jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/04/24/Plugins.html"},"url":"http://localhost:4000/2025/04/24/Plugins.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">Workshop Web Dasar</div>
+
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+  </div>
+</nav>
+
+    <main class="blog-container">
+  <h1 class="blog-post-title">Mengenal dan Menggunakan Plugins di Jekyll</h1>
+  <p>24 Apr 2025 </p>
+
+  <h1 id="-mengenal-dan-menggunakan-plugins-di-jekyll">🔌 Mengenal dan Menggunakan Plugins di Jekyll</h1>
+
+<p>Jekyll mendukung penggunaan <strong>plugin</strong> untuk memperluas fungsionalitasnya. Dengan plugin, Anda bisa menambahkan fitur seperti tag khusus, filter Liquid tambahan, generator halaman otomatis, dan banyak lagi.</p>
+
+<h2 id="-apa-itu-plugin-jekyll">❓ Apa Itu Plugin Jekyll?</h2>
+
+<p><strong>Plugin Jekyll</strong> adalah ekstensi Ruby yang berjalan selama proses build Jekyll. Plugin dapat digunakan untuk:</p>
+
+<ul>
+  <li>Menambahkan tag dan filter Liquid khusus</li>
+  <li>Membuat konten baru secara otomatis (misalnya sitemap)</li>
+  <li>Mengoptimalkan performa atau struktur situs</li>
+  <li>Mengintegrasikan layanan pihak ketiga</li>
+</ul>
+
+<h2 id="-mengaktifkan-plugin">📦 Mengaktifkan Plugin</h2>
+
+<p>Agar plugin dapat digunakan, Anda harus mendaftarkannya di file <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div></div>
+
+<p>Jekyll akan membaca daftar ini dan memuat plugin saat proses build.</p>
+
+<h2 id="-cara-instalasi-plugin">🔍 Cara Instalasi Plugin</h2>
+
+<p>Untuk menggunakan plugin eksternal (yang tersedia sebagai gem Ruby):</p>
+
+<ol>
+  <li>
+    <p><strong>Tambahkan plugin ke <code class="language-plaintext highlighter-rouge">Gemfile</code> proyek Anda</strong>:</p>
+
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-sitemap"</span>
+<span class="n">gem</span> <span class="s2">"jekyll-feed"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Instal plugin menggunakan Bundler</strong>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Pastikan plugin juga ditambahkan ke <code class="language-plaintext highlighter-rouge">_config.yml</code></strong> seperti dijelaskan sebelumnya.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>📌 <em>Catatan:</em> Pada GitHub Pages, hanya plugin tertentu yang diizinkan. Untuk daftar lengkap, kunjungi <a href="https://pages.github.com/versions/">GitHub Pages Plugins</a>.</p>
+</blockquote>
+
+<h2 id="️-plugin-populer-yang-direkomendasikan">⚙️ Plugin Populer yang Direkomendasikan</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Fungsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>jekyll-sitemap</td>
+      <td>Membuat sitemap.xml secara otomatis</td>
+    </tr>
+    <tr>
+      <td>jekyll-feed</td>
+      <td>Membuat RSS feed secara otomatis</td>
+    </tr>
+    <tr>
+      <td>jekyll-seo-tag</td>
+      <td>Menambahkan tag SEO ke setiap halaman</td>
+    </tr>
+    <tr>
+      <td>jekyll-paginate</td>
+      <td>Menyediakan fitur pagination pada blog</td>
+    </tr>
+    <tr>
+      <td>jekyll-archives</td>
+      <td>Menyediakan arsip berdasarkan kategori, tag, atau waktu</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-membuat-plugin-kustom">🔧 Membuat Plugin Kustom</h2>
+
+<p>Anda juga bisa membuat plugin sendiri:</p>
+
+<ol>
+  <li>
+    <p><strong>Buat folder <code class="language-plaintext highlighter-rouge">_plugins/</code> di root proyek Anda</strong></p>
+  </li>
+  <li>
+    <p><strong>Buat file Ruby</strong> (misalnya <code class="language-plaintext highlighter-rouge">hello.rb</code>) dengan isi seperti berikut:</p>
+
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Jekyll</span>
+  <span class="k">class</span> <span class="nc">HelloTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+      <span class="s2">"Halo dari plugin Jekyll!"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_tag</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">HelloTag</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Gunakan di Markdown atau HTML</strong>:</p>
+
+    <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello 
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="-batasan-di-github-pages">🚫 Batasan di GitHub Pages</h2>
+
+<p>GitHub Pages membatasi penggunaan plugin eksternal. Jika Anda membutuhkan plugin kustom atau tambahan:</p>
+
+<ul>
+  <li>Gunakan <strong>GitHub Actions</strong> atau build secara <strong>lokal</strong></li>
+  <li>Deploy ke layanan lain seperti <strong>Netlify</strong> atau <strong>Vercel</strong></li>
+</ul>
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li>Plugin Jekyll menambah fleksibilitas dan kekuatan dalam membangun situs statis</li>
+  <li>Anda dapat menggunakan plugin resmi dari RubyGems atau membuat plugin sendiri</li>
+  <li>Selalu uji plugin di lingkungan lokal sebelum deploy ke produksi</li>
+</ul>
+
+
+</main>
+
+
+
+  </body>
+</html>
+  
+
