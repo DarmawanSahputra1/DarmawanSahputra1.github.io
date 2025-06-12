@@ -2,7 +2,7 @@
 layout: student
 short_name: Darmawan
 name: Darmawan Sahputra
-nim: 2024573010090
+nim: 2024573010132
 class: TI-1D
 website: https://darmawansahputra1.github.io/
 ---
