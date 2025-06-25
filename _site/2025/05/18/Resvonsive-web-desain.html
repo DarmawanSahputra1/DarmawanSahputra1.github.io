@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Desain</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+          <!-- favicon -->
+   <link rel="icon" href="/assets/images/favicon.icn">
+
+          <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Responsive Web Desain</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Responsive Web Desain" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Materi Lengkap Responsive Web Design" />
+<meta property="og:description" content="Materi Lengkap Responsive Web Design" />
+<link rel="canonical" href="http://localhost:4000/2025/05/18/Resvonsive-web-desain.html" />
+<meta property="og:url" content="http://localhost:4000/2025/05/18/Resvonsive-web-desain.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-18T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Responsive Web Desain" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-18T00:00:00+07:00","datePublished":"2025-05-18T00:00:00+07:00","description":"Materi Lengkap Responsive Web Design","headline":"Responsive Web Desain","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/05/18/Resvonsive-web-desain.html"},"url":"http://localhost:4000/2025/05/18/Resvonsive-web-desain.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">Workshop Web Dasar</div>
+
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+  </div>
+</nav>
+
+    <main class="blog-container">
+  <h1 class="blog-post-title">Responsive Web Desain</h1>
+  <p>18 May 2025 </p>
+
+  <h1 id="materi-lengkap-responsive-web-design">Materi Lengkap Responsive Web Design</h1>
+
+<h2 id="1-pengertian">1. Pengertian</h2>
+
+<p>Responsive Web Design (RWD) adalah pendekatan desain web agar tampilan dan layout website menyesuaikan ukuran layar pengguna, seperti desktop, tablet, dan smartphone.</p>
+
+<h2 id="2-tujuan-responsive-design">2. Tujuan Responsive Design</h2>
+
+<ul>
+  <li>Memberikan pengalaman pengguna (UX) yang konsisten di semua perangkat</li>
+  <li>Mengurangi kebutuhan membuat versi terpisah untuk mobile</li>
+  <li>Meningkatkan SEO karena Google mengutamakan situs yang mobile-friendly</li>
+</ul>
+
+<h2 id="3-teknik-utama">3. Teknik Utama</h2>
+
+<h3 id="a-viewport-meta-tag">a. Viewport Meta Tag</h3>
+
+<p>Menentukan bagaimana halaman ditampilkan di perangkat mobile.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-media-queries">b. Media Queries</h3>
+
+<p>Menentukan aturan CSS berdasarkan lebar layar.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="n">lightgray</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="c-layout-fleksibel">c. Layout Fleksibel</h3>
+
+<p>Gunakan <code class="language-plaintext highlighter-rouge">width</code> dalam persentase daripada satuan tetap (px).</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">5%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="d-gambar-responsif">d. Gambar Responsif</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="e-framework-css-contoh-bootstrap">e. Framework CSS (Contoh: Bootstrap)</h3>
+
+<p>Menggunakan grid system dan utility classes seperti <code class="language-plaintext highlighter-rouge">col-md-6</code>, <code class="language-plaintext highlighter-rouge">d-none</code>, <code class="language-plaintext highlighter-rouge">d-lg-block</code>.</p>
+
+<h2 id="4-tools-untuk-testing-responsif">4. Tools untuk Testing Responsif</h2>
+
+<ul>
+  <li>Chrome DevTools (toggle device toolbar)</li>
+  <li>Responsively App</li>
+  <li>BrowserStack / LambdaTest</li>
+</ul>
+
+<h2 id="5-contoh-layout-responsive-sederhana">5. Contoh Layout Responsive Sederhana</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"id"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;style&gt;</span>
+    <span class="nc">.container</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+      <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nc">.box</span> <span class="p">{</span>
+      <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">300px</span><span class="p">;</span>
+      <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="no">lightblue</span><span class="p">;</span>
+      <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Konten 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Konten 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Konten 3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="6-tips-tambahan">6. Tips Tambahan</h2>
+
+<ul>
+  <li>Rancang dari mobile ke desktop (mobile-first design)</li>
+  <li>Hindari ukuran tetap (fixed width)</li>
+  <li>Gunakan rem/em untuk ukuran font</li>
+</ul>
+
+<h2 id="7-referensi">7. Referensi</h2>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">MDN Responsive Design</a></li>
+  <li><a href="https://www.w3schools.com/html/html_responsive.asp">W3Schools Responsive Web</a></li>
+</ul>
+
+</main>
+
+
+
+  </body>
+</html>
+  
+

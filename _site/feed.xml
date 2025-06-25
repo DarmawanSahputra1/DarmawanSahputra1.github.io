@@ -1,4 +1,710 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-30T20:59:51+07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Mengenal dan Menggunakan Plugins di Jekyll</title><link href="http://localhost:4000/2025/04/24/Plugins.html" rel="alternate" type="text/html" title="Mengenal dan Menggunakan Plugins di Jekyll" /><published>2025-04-24T00:00:00+07:00</published><updated>2025-04-24T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/24/Plugins</id><content type="html" xml:base="http://localhost:4000/2025/04/24/Plugins.html"><![CDATA[<h1 id="-mengenal-dan-menggunakan-plugins-di-jekyll">🔌 Mengenal dan Menggunakan Plugins di Jekyll</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-25T15:43:21+07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Bootstap</title><link href="http://localhost:4000/2025/05/18/Bootstap.html" rel="alternate" type="text/html" title="Bootstap" /><published>2025-05-18T00:00:00+07:00</published><updated>2025-05-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/18/Bootstap</id><content type="html" xml:base="http://localhost:4000/2025/05/18/Bootstap.html"><![CDATA[<h1 id="materi-lengkap-bootstrap">Materi Lengkap Bootstrap</h1>
+
+<h2 id="1-apa-itu-bootstrap">1. Apa itu Bootstrap?</h2>
+
+<p>Bootstrap adalah framework CSS open-source yang digunakan untuk membantu pengembangan web dengan cepat dan efisien. Bootstrap menyediakan class siap pakai untuk membuat desain website yang <strong>responsif</strong>, <strong>konsisten</strong>, dan <strong>mobile-first</strong>.</p>
+
+<h2 id="2-cara-menggunakan-bootstrap">2. Cara Menggunakan Bootstrap</h2>
+
+<h3 id="a-menggunakan-cdn">a. Menggunakan CDN</h3>
+
+<p>Masukkan link berikut ke dalam file HTML di bagian <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-menggunakan-file-download">b. Menggunakan File Download</h3>
+
+<ol>
+  <li>Download dari <a href="https://getbootstrap.com">https://getbootstrap.com</a></li>
+  <li>Ekstrak file dan letakkan folder <code class="language-plaintext highlighter-rouge">css/</code> dan <code class="language-plaintext highlighter-rouge">js/</code> di dalam project</li>
+  <li>Hubungkan ke HTML dengan:</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/bootstrap.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h2 id="3-struktur-grid-bootstrap">3. Struktur Grid Bootstrap</h2>
+
+<p>Bootstrap menggunakan sistem grid 12 kolom.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>Kolom 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>Kolom 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>Kolom 3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="breakpoints-responsive">Breakpoints Responsive:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">col-sm-*</code> untuk layar ≥576px</li>
+  <li><code class="language-plaintext highlighter-rouge">col-md-*</code> untuk layar ≥768px</li>
+  <li><code class="language-plaintext highlighter-rouge">col-lg-*</code> untuk layar ≥992px</li>
+  <li><code class="language-plaintext highlighter-rouge">col-xl-*</code> untuk layar ≥1200px</li>
+</ul>
+
+<h2 id="4-komponen-bootstrap">4. Komponen Bootstrap</h2>
+
+<h3 id="a-tombol">a. Tombol</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Tombol Biru<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Tombol Merah<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-formulir">b. Formulir</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"nama"</span> <span class="na">class=</span><span class="s">"form-label"</span><span class="nt">&gt;</span>Nama<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"nama"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<h3 id="c-navbar">c. Navbar</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg navbar-light bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Logo<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#navbarNav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-toggler-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"navbarNav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h3 id="d-card-kartu">d. Card (Kartu)</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span> <span class="na">style=</span><span class="s">"width: 18rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"image.jpg"</span> <span class="na">class=</span><span class="s">"card-img-top"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Judul<span class="nt">&lt;/h5&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Deskripsi isi card.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Lihat<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="e-modal-popup">e. Modal (Popup)</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Tombol --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#exampleModal"</span><span class="nt">&gt;</span>
+  Launch Modal
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="c">&lt;!-- Modal --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"exampleModal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Judul Modal<span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        Isi dari modal.
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-utilitas-bootstrap-utilities">5. Utilitas Bootstrap (Utilities)</h2>
+
+<p>Utilitas adalah class siap pakai untuk styling cepat.</p>
+
+<ul>
+  <li><strong>Margin &amp; Padding</strong>: <code class="language-plaintext highlighter-rouge">m-3</code>, <code class="language-plaintext highlighter-rouge">p-2</code>, <code class="language-plaintext highlighter-rouge">mt-4</code>, <code class="language-plaintext highlighter-rouge">px-5</code></li>
+  <li><strong>Warna</strong>: <code class="language-plaintext highlighter-rouge">bg-primary</code>, <code class="language-plaintext highlighter-rouge">text-danger</code>, <code class="language-plaintext highlighter-rouge">text-white</code></li>
+  <li><strong>Text</strong>: <code class="language-plaintext highlighter-rouge">text-center</code>, <code class="language-plaintext highlighter-rouge">text-end</code>, <code class="language-plaintext highlighter-rouge">fw-bold</code></li>
+  <li><strong>Display</strong>: <code class="language-plaintext highlighter-rouge">d-none</code>, <code class="language-plaintext highlighter-rouge">d-block</code>, <code class="language-plaintext highlighter-rouge">d-flex</code>, <code class="language-plaintext highlighter-rouge">d-md-none</code></li>
+</ul>
+
+<h2 id="6-tips-penggunaan">6. Tips Penggunaan</h2>
+
+<ul>
+  <li>Gunakan struktur grid dengan bijak</li>
+  <li>Kombinasikan komponen dan utilitas</li>
+  <li>Uji tampilan di berbagai ukuran perangkat (Responsif)</li>
+</ul>
+
+<h2 id="7-referensi-resmi">7. Referensi Resmi</h2>
+
+<ul>
+  <li>Dokumentasi Bootstrap: <a href="https://getbootstrap.com/docs">https://getbootstrap.com/docs</a></li>
+</ul>
+
+<h2 id="8-contoh-project-sederhana">8. Contoh Project Sederhana</h2>
+
+<p>Buat halaman dengan:</p>
+
+<ul>
+  <li>Header Navbar</li>
+  <li>2 kolom konten</li>
+  <li>Card galeri gambar</li>
+  <li>Footer</li>
+</ul>
+
+<p><strong>Bootstrap mempermudah pembuatan website modern tanpa perlu banyak menulis CSS dari awal.</strong></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi Lengkap Bootstrap]]></summary></entry><entry><title type="html">Video dan Audio</title><link href="http://localhost:4000/2025/05/18/Video-dan-Audio.html" rel="alternate" type="text/html" title="Video dan Audio" /><published>2025-05-18T00:00:00+07:00</published><updated>2025-05-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/18/Video%20dan%20Audio</id><content type="html" xml:base="http://localhost:4000/2025/05/18/Video-dan-Audio.html"><![CDATA[<h1 id="materi-lengkap-html-audio-dan-video">Materi Lengkap HTML Audio dan Video</h1>
+
+<h2 id="1-pengantar">1. Pengantar</h2>
+
+<p>HTML5 menyediakan tag khusus untuk menampilkan media audio dan video secara langsung di halaman web tanpa plugin tambahan seperti Flash.</p>
+
+<hr />
+
+<h2 id="2-tag-audio">2. Tag <code class="language-plaintext highlighter-rouge">&lt;audio&gt;</code></h2>
+
+<p>Digunakan untuk menyisipkan file audio.</p>
+
+<h3 id="contoh">Contoh:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;audio</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"audio/musik.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span><span class="nt">&gt;</span>
+  Browser Anda tidak mendukung tag audio.
+<span class="nt">&lt;/audio&gt;</span>
+</code></pre></div></div>
+
+<h3 id="atribut">Atribut:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">controls</code>: Menampilkan kontrol pemutar</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay</code>: Memutar otomatis saat halaman dimuat</li>
+  <li><code class="language-plaintext highlighter-rouge">loop</code>: Memutar ulang secara terus-menerus</li>
+  <li><code class="language-plaintext highlighter-rouge">muted</code>: Memulai dalam keadaan senyap</li>
+  <li><code class="language-plaintext highlighter-rouge">preload</code>: Petunjuk pemuatan (auto, metadata, none)</li>
+</ul>
+
+<h3 id="format-umum">Format Umum:</h3>
+
+<ul>
+  <li>MP3 (<code class="language-plaintext highlighter-rouge">audio/mpeg</code>)</li>
+  <li>OGG (<code class="language-plaintext highlighter-rouge">audio/ogg</code>)</li>
+  <li>WAV (<code class="language-plaintext highlighter-rouge">audio/wav</code>)</li>
+</ul>
+
+<h2 id="3-tag-video">3. Tag <code class="language-plaintext highlighter-rouge">&lt;video&gt;</code></h2>
+
+<p>Digunakan untuk menyisipkan file video.</p>
+
+<h3 id="contoh-1">Contoh:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;video</span> <span class="na">width=</span><span class="s">"320"</span> <span class="na">height=</span><span class="s">"240"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"video/film.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+  Browser Anda tidak mendukung tag video.
+<span class="nt">&lt;/video&gt;</span>
+</code></pre></div></div>
+
+<h3 id="atribut-1">Atribut:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">controls</code>: Menampilkan kontrol</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay</code>, <code class="language-plaintext highlighter-rouge">loop</code>, <code class="language-plaintext highlighter-rouge">muted</code></li>
+  <li><code class="language-plaintext highlighter-rouge">poster</code>: Gambar awal sebelum video diputar</li>
+  <li><code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code>: Ukuran tampilan video</li>
+</ul>
+
+<h3 id="format-umum-1">Format Umum:</h3>
+
+<ul>
+  <li>MP4 (<code class="language-plaintext highlighter-rouge">video/mp4</code>)</li>
+  <li>WebM (<code class="language-plaintext highlighter-rouge">video/webm</code>)</li>
+  <li>OGV (<code class="language-plaintext highlighter-rouge">video/ogg</code>)</li>
+</ul>
+
+<h2 id="4-multi-format-dan-fallback">4. Multi-Format dan Fallback</h2>
+
+<p>Gunakan beberapa tag <code class="language-plaintext highlighter-rouge">&lt;source&gt;</code> agar mendukung berbagai browser:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;video</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"video/video.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"video/video.webm"</span> <span class="na">type=</span><span class="s">"video/webm"</span><span class="nt">&gt;</span>
+  Browser Anda tidak mendukung pemutaran video.
+<span class="nt">&lt;/video&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-menyematkan-youtube">5. Menyematkan YouTube</h2>
+
+<p>Selain file lokal, video dari YouTube bisa disisipkan:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"315"</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/ID_VIDEO"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="6-tips">6. Tips</h2>
+
+<ul>
+  <li>Simpan file di folder <code class="language-plaintext highlighter-rouge">audio/</code> atau <code class="language-plaintext highlighter-rouge">video/</code></li>
+  <li>Kompres ukuran file agar tidak berat saat dimuat</li>
+  <li>Pastikan format didukung oleh semua browser target</li>
+</ul>
+
+<h2 id="7-referensi">7. Referensi</h2>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">MDN Web Docs - Audio</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">MDN Web Docs - Video</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi Lengkap HTML Audio dan Video]]></summary></entry><entry><title type="html">Responsive Web Desain</title><link href="http://localhost:4000/2025/05/18/Resvonsive-web-desain.html" rel="alternate" type="text/html" title="Responsive Web Desain" /><published>2025-05-18T00:00:00+07:00</published><updated>2025-05-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/18/Resvonsive%20web%20desain</id><content type="html" xml:base="http://localhost:4000/2025/05/18/Resvonsive-web-desain.html"><![CDATA[<h1 id="materi-lengkap-responsive-web-design">Materi Lengkap Responsive Web Design</h1>
+
+<h2 id="1-pengertian">1. Pengertian</h2>
+
+<p>Responsive Web Design (RWD) adalah pendekatan desain web agar tampilan dan layout website menyesuaikan ukuran layar pengguna, seperti desktop, tablet, dan smartphone.</p>
+
+<h2 id="2-tujuan-responsive-design">2. Tujuan Responsive Design</h2>
+
+<ul>
+  <li>Memberikan pengalaman pengguna (UX) yang konsisten di semua perangkat</li>
+  <li>Mengurangi kebutuhan membuat versi terpisah untuk mobile</li>
+  <li>Meningkatkan SEO karena Google mengutamakan situs yang mobile-friendly</li>
+</ul>
+
+<h2 id="3-teknik-utama">3. Teknik Utama</h2>
+
+<h3 id="a-viewport-meta-tag">a. Viewport Meta Tag</h3>
+
+<p>Menentukan bagaimana halaman ditampilkan di perangkat mobile.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-media-queries">b. Media Queries</h3>
+
+<p>Menentukan aturan CSS berdasarkan lebar layar.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="n">lightgray</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="c-layout-fleksibel">c. Layout Fleksibel</h3>
+
+<p>Gunakan <code class="language-plaintext highlighter-rouge">width</code> dalam persentase daripada satuan tetap (px).</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">5%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="d-gambar-responsif">d. Gambar Responsif</h3>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="e-framework-css-contoh-bootstrap">e. Framework CSS (Contoh: Bootstrap)</h3>
+
+<p>Menggunakan grid system dan utility classes seperti <code class="language-plaintext highlighter-rouge">col-md-6</code>, <code class="language-plaintext highlighter-rouge">d-none</code>, <code class="language-plaintext highlighter-rouge">d-lg-block</code>.</p>
+
+<h2 id="4-tools-untuk-testing-responsif">4. Tools untuk Testing Responsif</h2>
+
+<ul>
+  <li>Chrome DevTools (toggle device toolbar)</li>
+  <li>Responsively App</li>
+  <li>BrowserStack / LambdaTest</li>
+</ul>
+
+<h2 id="5-contoh-layout-responsive-sederhana">5. Contoh Layout Responsive Sederhana</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"id"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;style&gt;</span>
+    <span class="nc">.container</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+      <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nc">.box</span> <span class="p">{</span>
+      <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">300px</span><span class="p">;</span>
+      <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+      <span class="nl">background</span><span class="p">:</span> <span class="no">lightblue</span><span class="p">;</span>
+      <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Konten 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Konten 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Konten 3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="6-tips-tambahan">6. Tips Tambahan</h2>
+
+<ul>
+  <li>Rancang dari mobile ke desktop (mobile-first design)</li>
+  <li>Hindari ukuran tetap (fixed width)</li>
+  <li>Gunakan rem/em untuk ukuran font</li>
+</ul>
+
+<h2 id="7-referensi">7. Referensi</h2>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">MDN Responsive Design</a></li>
+  <li><a href="https://www.w3schools.com/html/html_responsive.asp">W3Schools Responsive Web</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi Lengkap Responsive Web Design]]></summary></entry><entry><title type="html">Koneksi PHP dengan database mysql</title><link href="http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql.html" rel="alternate" type="text/html" title="Koneksi PHP dengan database mysql" /><published>2025-05-18T00:00:00+07:00</published><updated>2025-05-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql</id><content type="html" xml:base="http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql.html"><![CDATA[<h1 id="materi-lengkap-koneksi-php-dengan-database-mysql">Materi Lengkap Koneksi PHP dengan Database MySQL</h1>
+
+<h2 id="1-pengantar">1. Pengantar</h2>
+
+<p>Koneksi antara PHP dan MySQL diperlukan agar aplikasi web dapat menyimpan dan mengambil data dari database.</p>
+
+<h2 id="2-persiapan">2. Persiapan</h2>
+
+<ul>
+  <li>Pastikan server web (Apache) dan MySQL berjalan (gunakan XAMPP, Laragon, atau lainnya)</li>
+  <li>Buat database terlebih dahulu (misalnya: <code class="language-plaintext highlighter-rouge">db_sekolah</code>)</li>
+</ul>
+
+<p>Contoh pembuatan database via PHPMyAdmin:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">db_sekolah</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="3-membuat-file-koneksi">3. Membuat File Koneksi</h2>
+
+<h3 id="a-menggunakan-mysqli-prosedural">a. Menggunakan MySQLi (prosedural)</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$host</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">;</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="s2">"root"</span><span class="p">;</span>
+<span class="nv">$pass</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$db</span>   <span class="o">=</span> <span class="s2">"db_sekolah"</span><span class="p">;</span>
+
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="nv">$host</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$pass</span><span class="p">,</span> <span class="nv">$db</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$koneksi</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nf">mysqli_connect_error</span><span class="p">());</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi berhasil."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-menggunakan-mysqli-oop">b. Menggunakan MySQLi (OOP)</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">mysqli</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"root"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"db_sekolah"</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$koneksi</span><span class="o">-&gt;</span><span class="n">connect_error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nv">$koneksi</span><span class="o">-&gt;</span><span class="n">connect_error</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi berhasil."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="c-menggunakan-pdo">c. Menggunakan PDO</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nv">$koneksi</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDO</span><span class="p">(</span><span class="s2">"mysql:host=localhost;dbname=db_sekolah"</span><span class="p">,</span> <span class="s2">"root"</span><span class="p">,</span> <span class="s2">""</span><span class="p">);</span>
+  <span class="nv">$koneksi</span><span class="o">-&gt;</span><span class="nf">setAttribute</span><span class="p">(</span><span class="no">PDO</span><span class="o">::</span><span class="no">ATTR_ERRMODE</span><span class="p">,</span> <span class="no">PDO</span><span class="o">::</span><span class="no">ERRMODE_EXCEPTION</span><span class="p">);</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi berhasil"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nc">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="4-contoh-penggunaan-koneksi">4. Contoh Penggunaan Koneksi</h2>
+
+<p>Menampilkan data dari tabel <code class="language-plaintext highlighter-rouge">siswa</code>:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+
+<span class="nv">$data</span> <span class="o">=</span> <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"SELECT * FROM siswa"</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nf">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$data</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">]</span> <span class="mf">.</span> <span class="s2">"&lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-menutup-koneksi">5. Menutup Koneksi</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">mysqli_close</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">);</span> <span class="c1">// untuk MySQLi</span>
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>         <span class="c1">// untuk PDO</span>
+</code></pre></div></div>
+
+<h2 id="6-tips">6. Tips</h2>
+
+<ul>
+  <li>Gunakan prepared statement untuk keamanan (hindari SQL Injection)</li>
+  <li>Simpan file koneksi di luar folder publik (htdocs)</li>
+  <li>Pisahkan file koneksi dari file utama untuk efisiensi</li>
+</ul>
+
+<h2 id="7-referensi">7. Referensi</h2>
+
+<ul>
+  <li><a href="https://www.php.net/manual/en/book.mysqli.php">PHP Manual - mysqli</a></li>
+  <li><a href="https://www.w3schools.com/php/php_mysql_connect.asp">W3Schools PHP MySQL Connect</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi Lengkap Koneksi PHP dengan Database MySQL]]></summary></entry><entry><title type="html">Crud PHP</title><link href="http://localhost:4000/2025/05/18/Crud-PHP.html" rel="alternate" type="text/html" title="Crud PHP" /><published>2025-05-18T00:00:00+07:00</published><updated>2025-05-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/18/Crud%20PHP</id><content type="html" xml:base="http://localhost:4000/2025/05/18/Crud-PHP.html"><![CDATA[<h1 id="materi-lengkap-php-crud-create-read-update-delete">Materi Lengkap PHP CRUD (Create, Read, Update, Delete)</h1>
+
+<h2 id="1-apa-itu-crud">1. Apa itu CRUD?</h2>
+
+<p>CRUD adalah singkatan dari:</p>
+
+<ul>
+  <li><strong>Create</strong>: Menambahkan data</li>
+  <li><strong>Read</strong>: Menampilkan data</li>
+  <li><strong>Update</strong>: Mengubah data</li>
+  <li><strong>Delete</strong>: Menghapus data</li>
+</ul>
+
+<p>CRUD adalah konsep dasar dalam pengelolaan data pada aplikasi web. Biasanya digunakan bersamaan dengan database seperti MySQL.</p>
+
+<h2 id="2-struktur-file-crud">2. Struktur File CRUD</h2>
+
+<p>Contoh struktur file dalam folder <code class="language-plaintext highlighter-rouge">php-crud/</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php-crud/
+│
+├── koneksi.php
+├── index.php       (Read)
+├── tambah.php      (Create)
+├── edit.php        (Update)
+└── hapus.php       (Delete)
+</code></pre></div></div>
+
+<h2 id="3-koneksi-database-koneksiphp">3. Koneksi Database (koneksi.php)</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"root"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"nama_database"</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$koneksi</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nf">mysqli_connect_error</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="4-create---menambahkan-data-tambahphp">4. CREATE - Menambahkan Data (tambah.php)</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> <span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nama"</span> <span class="na">placeholder=</span><span class="s">"Nama"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">name=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Simpan<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'submit'</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nv">$nama</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">];</span>
+  <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">];</span>
+  <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"INSERT INTO users (nama, email) VALUES ('</span><span class="nv">$nama</span><span class="s2">', '</span><span class="nv">$email</span><span class="s2">')"</span><span class="p">);</span>
+  <span class="nb">header</span><span class="p">(</span><span class="s2">"Location: index.php"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-read---menampilkan-data-indexphp">5. READ - Menampilkan Data (index.php)</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> <span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr&gt;&lt;th&gt;</span>Nama<span class="nt">&lt;/th&gt;&lt;th&gt;</span>Email<span class="nt">&lt;/th&gt;&lt;th&gt;</span>Aksi<span class="nt">&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="cp">&lt;?php</span>
+  <span class="nv">$data</span> <span class="o">=</span> <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"SELECT * FROM users"</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nf">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$data</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;tr&gt;
+      &lt;td&gt;</span><span class="si">{</span><span class="nv">$row</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/td&gt;
+      &lt;td&gt;</span><span class="si">{</span><span class="nv">$row</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href='edit.php?id=</span><span class="si">{</span><span class="nv">$row</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span><span class="si">}</span><span class="s2">'&gt;Edit&lt;/a&gt; |
+        &lt;a href='hapus.php?id=</span><span class="si">{</span><span class="nv">$row</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span><span class="si">}</span><span class="s2">'&gt;Hapus&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;"</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="cp">?&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre></div></div>
+
+<h2 id="6-update---mengubah-data-editphp">6. UPDATE - Mengubah Data (edit.php)</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
+<span class="nv">$hasil</span> <span class="o">=</span> <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"SELECT * FROM users WHERE id=</span><span class="nv">$id</span><span class="s2">"</span><span class="p">);</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nf">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$hasil</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+
+<span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"nama"</span> <span class="na">value=</span><span class="s">"</span><span class="cp">&lt;?=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">value=</span><span class="s">"</span><span class="cp">&lt;?=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">name=</span><span class="s">"update"</span><span class="nt">&gt;</span>Update<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'update'</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nv">$nama</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">];</span>
+  <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">];</span>
+  <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"UPDATE users SET nama='</span><span class="nv">$nama</span><span class="s2">', email='</span><span class="nv">$email</span><span class="s2">' WHERE id=</span><span class="nv">$id</span><span class="s2">"</span><span class="p">);</span>
+  <span class="nb">header</span><span class="p">(</span><span class="s2">"Location: index.php"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="7-delete---menghapus-data-hapusphp">7. DELETE - Menghapus Data (hapus.php)</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
+<span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"DELETE FROM users WHERE id=</span><span class="nv">$id</span><span class="s2">"</span><span class="p">);</span>
+<span class="nb">header</span><span class="p">(</span><span class="s2">"Location: index.php"</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="8-tips-keamanan">8. Tips Keamanan</h2>
+
+<ul>
+  <li>Gunakan <code class="language-plaintext highlighter-rouge">mysqli_real_escape_string()</code> atau prepared statement</li>
+  <li>Validasi input pengguna</li>
+  <li>Gunakan <code class="language-plaintext highlighter-rouge">password_hash()</code> untuk menyimpan password</li>
+</ul>
+
+<h2 id="9-referensi">9. Referensi</h2>
+
+<ul>
+  <li><a href="https://www.php.net/manual/en/book.mysqli.php">PHP Manual - mysqli</a></li>
+  <li><a href="https://www.w3schools.com/php/php_mysql_intro.asp">W3Schools PHP CRUD</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi Lengkap PHP CRUD (Create, Read, Update, Delete)]]></summary></entry><entry><title type="html">Mengenal dan Mengatur _config.yml pada Jekyll</title><link href="http://localhost:4000/2025/04/24/Config-Yml.html" rel="alternate" type="text/html" title="Mengenal dan Mengatur _config.yml pada Jekyll" /><published>2025-04-24T00:00:00+07:00</published><updated>2025-04-24T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/24/Config-Yml</id><content type="html" xml:base="http://localhost:4000/2025/04/24/Config-Yml.html"><![CDATA[<h1 id="️-mengenal-dan-mengatur-_configyml-pada-jekyll">⚙️ Mengenal dan Mengatur <code class="language-plaintext highlighter-rouge">_config.yml</code> pada Jekyll</h1>
+
+<p>File <code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file konfigurasi utama dalam proyek Jekyll. File ini digunakan untuk menyimpan pengaturan global yang akan digunakan di seluruh situs Anda, seperti nama situs, URL, layout default, plugin, dan sebagainya.</p>
+
+<p>Dengan memahami cara kerja dan struktur file ini, Anda bisa mengatur perilaku situs Jekyll Anda dengan lebih mudah dan konsisten.</p>
+
+<h2 id="-apa-itu-_configyml">📁 Apa Itu <code class="language-plaintext highlighter-rouge">_config.yml</code>?</h2>
+
+<p><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file dalam format YAML (YAML Ain’t Markup Language) yang digunakan Jekyll untuk:</p>
+
+<ul>
+  <li>Mengatur metadata situs seperti judul, deskripsi, dan URL.</li>
+  <li>Mengonfigurasi permalink, koleksi, pagination, dan lain-lain.</li>
+  <li>Mengaktifkan plugin atau fitur tambahan.</li>
+  <li>Menentukan pengaturan build dan deployment.</li>
+</ul>
+
+<p>Jekyll secara otomatis membaca file ini saat membangun situs Anda.</p>
+
+<h2 id="-contoh-struktur-dasar-_configyml">📝 Contoh Struktur Dasar <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Blog</span><span class="nv"> </span><span class="s">Saya"</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Kumpulan</span><span class="nv"> </span><span class="s">tulisan</span><span class="nv"> </span><span class="s">tentang</span><span class="nv"> </span><span class="s">teknologi</span><span class="nv"> </span><span class="s">dan</span><span class="nv"> </span><span class="s">pemrograman"</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># jika situs berada di subfolder, contoh "/blog"</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://namadomain.com"</span> <span class="c1"># ganti dengan URL situs Anda</span>
+
+<span class="na">author</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Nama</span><span class="nv"> </span><span class="s">Anda"</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">nama@contoh.com"</span>
+
+<span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
+
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:categories/:title/</span>
+
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div></div>
+
+<h2 id="-penjelasan-elemen-konfigurasi">🔍 Penjelasan Elemen Konfigurasi</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kunci</th>
+      <th>Fungsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td>Judul situs. Muncul di tag <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> dan halaman depan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td>Deskripsi singkat situs Anda. Digunakan oleh plugin SEO.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">baseurl</code></td>
+      <td>URL basis jika situs Anda berada di subdirektori.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td>URL utama situs Anda.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">author</code></td>
+      <td>Informasi tentang penulis situs.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">theme</code></td>
+      <td>Tema Jekyll yang digunakan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
+      <td>Menentukan format URL untuk halaman/postingan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plugins</code></td>
+      <td>Plugin tambahan yang digunakan untuk memperluas fungsi situs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-contoh-lain-konfigurasi-lanjutan">🧪 Contoh Lain Konfigurasi Lanjutan</h2>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/page:num/"</span>
+
+<span class="na">collections</span><span class="pi">:</span>
+  <span class="na">tutorials</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/tutorials/:path/</span>
+</code></pre></div></div>
+
+<h3 id="penjelasan-tambahan">Penjelasan Tambahan:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">markdown</code>: Menentukan engine Markdown yang digunakan (<code class="language-plaintext highlighter-rouge">kramdown</code> adalah default).</li>
+  <li><code class="language-plaintext highlighter-rouge">paginate</code>: Mengaktifkan pagination untuk posting blog.</li>
+  <li><code class="language-plaintext highlighter-rouge">collections</code>: Menambah koleksi khusus seperti <code class="language-plaintext highlighter-rouge">tutorials</code>.</li>
+</ul>
+
+<h2 id="-tips-penting">💡 Tips Penting</h2>
+
+<ul>
+  <li>YAML sangat peka terhadap indentasi. Gunakan spasi, <strong>bukan tab</strong>.</li>
+  <li>Anda bisa memiliki lebih dari satu file konfigurasi dan menggabungkannya saat build:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve <span class="nt">--config</span> _config.yml,_config_dev.yml
+</code></pre></div></div>
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah jantung dari konfigurasi situs Jekyll.</li>
+  <li>Anda dapat menyesuaikan banyak aspek situs melalui file ini: dari nama situs hingga perilaku URL.</li>
+  <li>Memahami struktur dan cara kerja YAML sangat membantu dalam menghindari kesalahan saat build.</li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[⚙️ Mengenal dan Mengatur _config.yml pada Jekyll]]></summary></entry><entry><title type="html">Mengenal dan Menggunakan Plugins di Jekyll</title><link href="http://localhost:4000/2025/04/24/Plugins.html" rel="alternate" type="text/html" title="Mengenal dan Menggunakan Plugins di Jekyll" /><published>2025-04-24T00:00:00+07:00</published><updated>2025-04-24T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/24/Plugins</id><content type="html" xml:base="http://localhost:4000/2025/04/24/Plugins.html"><![CDATA[<h1 id="-mengenal-dan-menggunakan-plugins-di-jekyll">🔌 Mengenal dan Menggunakan Plugins di Jekyll</h1>
 
 <p>Jekyll mendukung penggunaan <strong>plugin</strong> untuk memperluas fungsionalitasnya. Dengan plugin, Anda bisa menambahkan fitur seperti tag khusus, filter Liquid tambahan, generator halaman otomatis, dan banyak lagi.</p>
 
@@ -130,128 +836,7 @@
   <li>Plugin Jekyll menambah fleksibilitas dan kekuatan dalam membangun situs statis</li>
   <li>Anda dapat menggunakan plugin resmi dari RubyGems atau membuat plugin sendiri</li>
   <li>Selalu uji plugin di lingkungan lokal sebelum deploy ke produksi</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[🔌 Mengenal dan Menggunakan Plugins di Jekyll]]></summary></entry><entry><title type="html">Mengenal dan Mengatur _config.yml pada Jekyll</title><link href="http://localhost:4000/2025/04/24/Config-Yml.html" rel="alternate" type="text/html" title="Mengenal dan Mengatur _config.yml pada Jekyll" /><published>2025-04-24T00:00:00+07:00</published><updated>2025-04-24T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/24/Config-Yml</id><content type="html" xml:base="http://localhost:4000/2025/04/24/Config-Yml.html"><![CDATA[<h1 id="️-mengenal-dan-mengatur-_configyml-pada-jekyll">⚙️ Mengenal dan Mengatur <code class="language-plaintext highlighter-rouge">_config.yml</code> pada Jekyll</h1>
-
-<p>File <code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file konfigurasi utama dalam proyek Jekyll. File ini digunakan untuk menyimpan pengaturan global yang akan digunakan di seluruh situs Anda, seperti nama situs, URL, layout default, plugin, dan sebagainya.</p>
-
-<p>Dengan memahami cara kerja dan struktur file ini, Anda bisa mengatur perilaku situs Jekyll Anda dengan lebih mudah dan konsisten.</p>
-
-<h2 id="-apa-itu-_configyml">📁 Apa Itu <code class="language-plaintext highlighter-rouge">_config.yml</code>?</h2>
-
-<p><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah file dalam format YAML (YAML Ain’t Markup Language) yang digunakan Jekyll untuk:</p>
-
-<ul>
-  <li>Mengatur metadata situs seperti judul, deskripsi, dan URL.</li>
-  <li>Mengonfigurasi permalink, koleksi, pagination, dan lain-lain.</li>
-  <li>Mengaktifkan plugin atau fitur tambahan.</li>
-  <li>Menentukan pengaturan build dan deployment.</li>
-</ul>
-
-<p>Jekyll secara otomatis membaca file ini saat membangun situs Anda.</p>
-
-<h2 id="-contoh-struktur-dasar-_configyml">📝 Contoh Struktur Dasar <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Blog</span><span class="nv"> </span><span class="s">Saya"</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Kumpulan</span><span class="nv"> </span><span class="s">tulisan</span><span class="nv"> </span><span class="s">tentang</span><span class="nv"> </span><span class="s">teknologi</span><span class="nv"> </span><span class="s">dan</span><span class="nv"> </span><span class="s">pemrograman"</span>
-<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># jika situs berada di subfolder, contoh "/blog"</span>
-<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://namadomain.com"</span> <span class="c1"># ganti dengan URL situs Anda</span>
-
-<span class="na">author</span><span class="pi">:</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Nama</span><span class="nv"> </span><span class="s">Anda"</span>
-  <span class="na">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">nama@contoh.com"</span>
-
-<span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
-
-<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:categories/:title/</span>
-
-<span class="na">plugins</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">jekyll-feed</span>
-  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
-</code></pre></div></div>
-
-<h2 id="-penjelasan-elemen-konfigurasi">🔍 Penjelasan Elemen Konfigurasi</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Kunci</th>
-      <th>Fungsi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">title</code></td>
-      <td>Judul situs. Muncul di tag <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> dan halaman depan.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">description</code></td>
-      <td>Deskripsi singkat situs Anda. Digunakan oleh plugin SEO.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">baseurl</code></td>
-      <td>URL basis jika situs Anda berada di subdirektori.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">url</code></td>
-      <td>URL utama situs Anda.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">author</code></td>
-      <td>Informasi tentang penulis situs.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">theme</code></td>
-      <td>Tema Jekyll yang digunakan.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
-      <td>Menentukan format URL untuk halaman/postingan.</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plugins</code></td>
-      <td>Plugin tambahan yang digunakan untuk memperluas fungsi situs.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="-contoh-lain-konfigurasi-lanjutan">🧪 Contoh Lain Konfigurasi Lanjutan</h2>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
-<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
-<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>
-<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/page:num/"</span>
-
-<span class="na">collections</span><span class="pi">:</span>
-  <span class="na">tutorials</span><span class="pi">:</span>
-    <span class="na">output</span><span class="pi">:</span> <span class="kc">true</span>
-    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/tutorials/:path/</span>
-</code></pre></div></div>
-
-<h3 id="penjelasan-tambahan">Penjelasan Tambahan:</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">markdown</code>: Menentukan engine Markdown yang digunakan (<code class="language-plaintext highlighter-rouge">kramdown</code> adalah default).</li>
-  <li><code class="language-plaintext highlighter-rouge">paginate</code>: Mengaktifkan pagination untuk posting blog.</li>
-  <li><code class="language-plaintext highlighter-rouge">collections</code>: Menambah koleksi khusus seperti <code class="language-plaintext highlighter-rouge">tutorials</code>.</li>
-</ul>
-
-<h2 id="-tips-penting">💡 Tips Penting</h2>
-
-<ul>
-  <li>YAML sangat peka terhadap indentasi. Gunakan spasi, <strong>bukan tab</strong>.</li>
-  <li>Anda bisa memiliki lebih dari satu file konfigurasi dan menggabungkannya saat build:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve <span class="nt">--config</span> _config.yml,_config_dev.yml
-</code></pre></div></div>
-
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> adalah jantung dari konfigurasi situs Jekyll.</li>
-  <li>Anda dapat menyesuaikan banyak aspek situs melalui file ini: dari nama situs hingga perilaku URL.</li>
-  <li>Memahami struktur dan cara kerja YAML sangat membantu dalam menghindari kesalahan saat build.</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[⚙️ Mengenal dan Mengatur _config.yml pada Jekyll]]></summary></entry><entry><title type="html">HTML link dan Lists</title><link href="http://localhost:4000/2025/03/20/html-linkdan-lists.html" rel="alternate" type="text/html" title="HTML link dan Lists" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-linkdan-lists</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-linkdan-lists.html"><![CDATA[<h1 id="-html-link-dan-list">📘 HTML: Link dan List</h1>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[🔌 Mengenal dan Menggunakan Plugins di Jekyll]]></summary></entry><entry><title type="html">HTML link dan Lists</title><link href="http://localhost:4000/2025/03/20/html-linkdan-lists.html" rel="alternate" type="text/html" title="HTML link dan Lists" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-linkdan-lists</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-linkdan-lists.html"><![CDATA[<h1 id="-html-link-dan-list">📘 HTML: Link dan List</h1>
 
 <p>Penjelasan tentang apa itu Link dan List</p>
 
@@ -724,266 +1309,4 @@
   <p>🎓 Pahami keduanya agar kamu bisa memilih format yang tepat sesuai kebutuhan proyekmu!</p>
 </blockquote>
 
-<p>```</p>]]></content><author><name></name></author><summary type="html"><![CDATA[📘 Markdown dan HTML]]></summary></entry><entry><title type="html">Menggunakan SASS dan SCSS di Jekyll</title><link href="http://localhost:4000/2025/02/22/SASS-dan-SCSS.html" rel="alternate" type="text/html" title="Menggunakan SASS dan SCSS di Jekyll" /><published>2025-02-22T00:00:00+07:00</published><updated>2025-02-22T00:00:00+07:00</updated><id>http://localhost:4000/2025/02/22/SASS-dan-SCSS</id><content type="html" xml:base="http://localhost:4000/2025/02/22/SASS-dan-SCSS.html"><![CDATA[<h1 id="-menggunakan-sass-dan-scss-di-jekyll">🎨 Menggunakan SASS dan SCSS di Jekyll</h1>
-
-<p>Jekyll secara bawaan mendukung <strong>SASS/SCSS</strong>, yaitu ekstensi dari CSS yang memungkinkan penggunaan variabel, nested rules, mixins, dan banyak lagi. Ini sangat berguna untuk membuat gaya situs yang lebih rapi dan modular.</p>
-
-<h2 id="-apa-itu-sass-dan-scss">💡 Apa Itu SASS dan SCSS?</h2>
-
-<ul>
-  <li><strong>SASS (Syntactically Awesome Stylesheets)</strong> adalah preprocessor CSS yang memperkenalkan sintaks yang lebih efisien dan fitur tambahan.</li>
-  <li><strong>SCSS</strong> adalah varian dari SASS yang menggunakan sintaks mirip CSS. Ini adalah format yang lebih umum dan mudah diadopsi.</li>
-</ul>
-
-<p>Contoh SCSS:</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#3498db</span><span class="p">;</span>
-
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
-
-  <span class="nt">h1</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="-struktur-file-scss-di-jekyll">📁 Struktur File SCSS di Jekyll</h2>
-
-<p>Jekyll mengharapkan file SCSS berada di dalam folder bernama <code class="language-plaintext highlighter-rouge">_sass</code>, dan satu file utama SCSS (biasanya <code class="language-plaintext highlighter-rouge">main.scss</code>) berada di dalam folder <code class="language-plaintext highlighter-rouge">assets/css/</code>.</p>
-
-<p><strong>Contoh struktur:</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
-├── _sass/
-│   └── _variables.scss
-├── assets/
-│   └── css/
-│       └── main.scss
-</code></pre></div></div>
-
-<h2 id="-menggunakan-scss-dalam-proyek-jekyll">📦 Menggunakan SCSS dalam Proyek Jekyll</h2>
-
-<ol>
-  <li>
-    <p><strong>Buat folder <code class="language-plaintext highlighter-rouge">_sass/</code></strong> di root proyek Anda.</p>
-  </li>
-  <li>
-    <p><strong>Tambahkan file partial SCSS</strong>, misalnya <code class="language-plaintext highlighter-rouge">_variables.scss</code>:</p>
-
-    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$bg-color</span><span class="p">:</span> <span class="mh">#f4f4f4</span><span class="p">;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p><strong>Buat file utama <code class="language-plaintext highlighter-rouge">main.scss</code> di <code class="language-plaintext highlighter-rouge">assets/css/</code></strong>:</p>
-
-    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span>
-<span class="nt">---</span>
-<span class="o">@</span><span class="nt">import</span> <span class="s2">"variables"</span><span class="p">;</span>
-
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$bg-color</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>    </div>
-
-    <blockquote>
-      <p>Baris <code class="language-plaintext highlighter-rouge">---</code> di atas wajib untuk memberi tahu Jekyll memproses file ini melalui Liquid dan SASS.</p>
-    </blockquote>
-  </li>
-  <li>
-    <p><strong>Tambahkan ke layout HTML Anda:</strong></p>
-
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">&gt;</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<h2 id="️-konfigurasi-di-_configyml">⚙️ Konfigurasi di <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
-
-<p>Jika Anda ingin mengatur output CSS dari SCSS, tambahkan ini di <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sass</span><span class="pi">:</span>
-  <span class="na">style</span><span class="pi">:</span> <span class="s">compressed</span> <span class="c1"># atau nested, expanded, compact</span>
-</code></pre></div></div>
-
-<p>Nilai <code class="language-plaintext highlighter-rouge">compressed</code> akan menghasilkan file CSS yang lebih kecil.</p>
-
-<h2 id="-tips-penggunaan">🧪 Tips Penggunaan</h2>
-
-<ul>
-  <li>Gunakan <strong>partial</strong> (file SCSS yang diawali dengan <code class="language-plaintext highlighter-rouge">_</code>) untuk membagi-bagi style berdasarkan komponen.</li>
-  <li>Hindari menaruh CSS di dalam HTML; SCSS lebih terstruktur dan mudah dipelihara.</li>
-  <li>Manfaatkan fitur seperti <strong>mixin</strong>, <strong>extend</strong>, dan <strong>functions</strong> untuk membuat style yang reusable.</li>
-</ul>
-
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
-
-<ul>
-  <li>Jekyll mendukung SCSS secara bawaan tanpa konfigurasi tambahan.</li>
-  <li>SCSS membantu Anda menulis CSS yang lebih bersih, modular, dan mudah dikelola.</li>
-  <li>Manfaatkan struktur file <code class="language-plaintext highlighter-rouge">_sass</code> dan <code class="language-plaintext highlighter-rouge">assets/css</code> untuk mengatur style Anda dengan baik.</li>
-</ul>
-
-<p>```</p>]]></content><author><name></name></author><summary type="html"><![CDATA[🎨 Menggunakan SASS dan SCSS di Jekyll]]></summary></entry><entry><title type="html">Instalasi Ruby dan Jekyll</title><link href="http://localhost:4000/2025/02/20/Instalasi-Ruby-dan-Jekyll.html" rel="alternate" type="text/html" title="Instalasi Ruby dan Jekyll" /><published>2025-02-20T00:00:00+07:00</published><updated>2025-02-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/02/20/Instalasi-Ruby-dan-Jekyll</id><content type="html" xml:base="http://localhost:4000/2025/02/20/Instalasi-Ruby-dan-Jekyll.html"><![CDATA[<h1 id="-instalasi-ruby-dan-jekyll">📘 Instalasi Ruby dan Jekyll</h1>
-
-<p>Jekyll adalah salah satu generator situs statis yang sangat populer, dan Ruby adalah bahasa pemrograman yang digunakan oleh Jekyll. Berikut adalah panduan lengkap untuk menginstal Ruby dan Jekyll di sistem Anda.</p>
-
-<h2 id="-apa-itu-ruby">🧑‍💻 Apa Itu Ruby?</h2>
-
-<p><strong>Ruby</strong> adalah bahasa pemrograman dinamis dan berorientasi objek yang digunakan dalam banyak aplikasi, termasuk Jekyll. Ruby memungkinkan Jekyll untuk menjalankan berbagai perintah untuk membangun situs web statis dengan mudah.</p>
-
-<h2 id="-apa-itu-jekyll">🧑‍💻 Apa Itu Jekyll?</h2>
-
-<p><strong>Jekyll</strong> adalah static site generator yang dibangun dengan Ruby. Jekyll memungkinkan Anda untuk membuat dan mengelola blog, portfolio, atau situs web sederhana tanpa memerlukan database. Anda cukup menulis konten dalam Markdown atau HTML, dan Jekyll akan menghasilkan situs web statis.</p>
-
-<h2 id="-persyaratan-sistem">📋 Persyaratan Sistem</h2>
-
-<p>Sebelum memulai instalasi, pastikan komputer Anda memenuhi persyaratan berikut:</p>
-
-<ul>
-  <li>Sistem Operasi: Linux, macOS, atau Windows</li>
-  <li>Ruby: Versi terbaru (atau versi yang didukung oleh Jekyll)</li>
-  <li>Bundler: Untuk mengelola dependensi Ruby</li>
-</ul>
-
-<h2 id="-langkah-1-instalasi-ruby">📦 Langkah 1: Instalasi Ruby</h2>
-
-<h3 id="️-untuk-macos">🖥️ Untuk macOS</h3>
-
-<ol>
-  <li>
-    <p><strong>Menggunakan Homebrew (rekomendasi)</strong></p>
-
-    <p>Jika Anda belum menginstal Homebrew, buka terminal dan jalankan perintah berikut untuk menginstalnya:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
-</code></pre></div>    </div>
-
-    <p>Kemudian, instal Ruby menggunakan Homebrew:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p><strong>Verifikasi Instalasi Ruby</strong></p>
-
-    <p>Setelah instalasi selesai, pastikan Ruby telah terinstal dengan benar:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
-</code></pre></div>    </div>
-
-    <p>Anda harus melihat versi Ruby yang baru diinstal.</p>
-  </li>
-</ol>
-
-<h3 id="️-untuk-windows">🖥️ Untuk Windows</h3>
-
-<ol>
-  <li>
-    <p><strong>Unduh Ruby Installer</strong></p>
-
-    <p>Kunjungi halaman <a href="https://rubyinstaller.org/">Ruby Installer</a> dan unduh versi Ruby yang sesuai dengan sistem operasi Windows Anda.</p>
-  </li>
-  <li>
-    <p><strong>Instalasi Ruby</strong></p>
-
-    <p>Jalankan installer dan pilih opsi untuk menambahkan Ruby ke PATH selama instalasi.</p>
-  </li>
-  <li>
-    <p><strong>Verifikasi Instalasi Ruby</strong></p>
-
-    <p>Setelah instalasi selesai, buka Command Prompt atau PowerShell dan ketik:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
-</code></pre></div>    </div>
-
-    <p>Anda akan melihat versi Ruby yang baru diinstal.</p>
-  </li>
-</ol>
-
-<h2 id="-langkah-2-instalasi-jekyll">📦 Langkah 2: Instalasi Jekyll</h2>
-
-<p>Setelah Ruby terinstal dengan benar, Anda dapat melanjutkan untuk menginstal Jekyll dan Bundler.</p>
-
-<ol>
-  <li>
-    <p><strong>Instalasi Jekyll dan Bundler</strong></p>
-
-    <p>Di terminal atau command prompt, jalankan perintah berikut untuk menginstal Jekyll dan Bundler:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
-</code></pre></div>    </div>
-
-    <p>Perintah ini akan menginstal Jekyll dan Bundler, yang digunakan untuk mengelola dependensi proyek Jekyll.</p>
-  </li>
-  <li>
-    <p><strong>Verifikasi Instalasi Jekyll</strong></p>
-
-    <p>Setelah instalasi selesai, pastikan Jekyll telah terinstal dengan benar:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll <span class="nt">-v</span>
-</code></pre></div>    </div>
-
-    <p>Anda akan melihat versi Jekyll yang baru diinstal.</p>
-  </li>
-</ol>
-
-<h2 id="️-membuat-situs-jekyll-baru">🏗️ Membuat Situs Jekyll Baru</h2>
-
-<p>Setelah Ruby dan Jekyll terinstal, Anda dapat membuat situs Jekyll baru.</p>
-
-<ol>
-  <li>
-    <p><strong>Buat Proyek Jekyll Baru</strong></p>
-
-    <p>Di terminal atau command prompt, jalankan perintah berikut untuk membuat proyek Jekyll baru:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new nama_proyek_anda
-</code></pre></div>    </div>
-
-    <p>Ini akan membuat folder proyek dengan struktur dasar situs Jekyll.</p>
-  </li>
-  <li>
-    <p><strong>Masuk ke Direktori Proyek</strong></p>
-
-    <p>Arahkan ke folder proyek yang baru dibuat:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>nama_proyek_anda
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p><strong>Menjalankan Server Lokal</strong></p>
-
-    <p>Untuk melihat situs Anda secara lokal, jalankan perintah berikut:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div>    </div>
-
-    <p>Jekyll akan membangun situs dan menjalankan server lokal di alamat <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>. Anda dapat membuka browser dan melihat situs baru Anda.</p>
-  </li>
-</ol>
-
-<h2 id="-troubleshooting">🚧 Troubleshooting</h2>
-
-<h3 id="️-masalah-umum">🛠️ Masalah Umum</h3>
-
-<ul>
-  <li>
-    <p><strong>Masalah Versi Ruby</strong>: Jika Anda mengalami masalah dengan versi Ruby yang terlalu lama, pastikan Anda menggunakan versi yang didukung oleh Jekyll. Anda bisa mengatur versi Ruby menggunakan <a href="https://github.com/rbenv/rbenv">rbenv</a> atau <a href="https://rvm.io/">RVM</a>.</p>
-  </li>
-  <li>
-    <p><strong>Masalah Dependency</strong>: Jika Anda mengalami masalah dengan dependensi, pastikan Anda menjalankan <code class="language-plaintext highlighter-rouge">bundle install</code> setelah membuat proyek baru untuk menginstal semua gem yang diperlukan.</p>
-  </li>
-  <li>
-    <p><strong>Kesalahan Server</strong>: Jika server lokal tidak berjalan, pastikan Anda menjalankan perintah <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> dari dalam direktori proyek Anda.</p>
-  </li>
-</ul>
-
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
-
-<ul>
-  <li><strong>Ruby</strong> adalah bahasa pemrograman yang digunakan oleh Jekyll untuk membangun situs web statis.</li>
-  <li><strong>Jekyll</strong> memungkinkan pembuatan dan pengelolaan situs web statis dengan mudah, menggunakan template dan konten dalam format Markdown.</li>
-  <li>Setelah mengikuti langkah-langkah instalasi, Anda dapat membuat dan menjalankan situs web Jekyll di komputer lokal Anda.</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[📘 Instalasi Ruby dan Jekyll]]></summary></entry></feed>
+<p>```</p>]]></content><author><name></name></author><summary type="html"><![CDATA[📘 Markdown dan HTML]]></summary></entry></feed>

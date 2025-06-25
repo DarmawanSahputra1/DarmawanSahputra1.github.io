@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koneksi PHP dengan database mysql</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+          <!-- favicon -->
+   <link rel="icon" href="/assets/images/favicon.icn">
+
+          <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Koneksi PHP dengan database mysql</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Koneksi PHP dengan database mysql" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Materi Lengkap Koneksi PHP dengan Database MySQL" />
+<meta property="og:description" content="Materi Lengkap Koneksi PHP dengan Database MySQL" />
+<link rel="canonical" href="http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql.html" />
+<meta property="og:url" content="http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-18T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Koneksi PHP dengan database mysql" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-18T00:00:00+07:00","datePublished":"2025-05-18T00:00:00+07:00","description":"Materi Lengkap Koneksi PHP dengan Database MySQL","headline":"Koneksi PHP dengan database mysql","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql.html"},"url":"http://localhost:4000/2025/05/18/Koneksi-PHP-dengan-database-mysql.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">Workshop Web Dasar</div>
+
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+  </div>
+</nav>
+
+    <main class="blog-container">
+  <h1 class="blog-post-title">Koneksi PHP dengan database mysql</h1>
+  <p>18 May 2025 </p>
+
+  <h1 id="materi-lengkap-koneksi-php-dengan-database-mysql">Materi Lengkap Koneksi PHP dengan Database MySQL</h1>
+
+<h2 id="1-pengantar">1. Pengantar</h2>
+
+<p>Koneksi antara PHP dan MySQL diperlukan agar aplikasi web dapat menyimpan dan mengambil data dari database.</p>
+
+<h2 id="2-persiapan">2. Persiapan</h2>
+
+<ul>
+  <li>Pastikan server web (Apache) dan MySQL berjalan (gunakan XAMPP, Laragon, atau lainnya)</li>
+  <li>Buat database terlebih dahulu (misalnya: <code class="language-plaintext highlighter-rouge">db_sekolah</code>)</li>
+</ul>
+
+<p>Contoh pembuatan database via PHPMyAdmin:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">db_sekolah</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="3-membuat-file-koneksi">3. Membuat File Koneksi</h2>
+
+<h3 id="a-menggunakan-mysqli-prosedural">a. Menggunakan MySQLi (prosedural)</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$host</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">;</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="s2">"root"</span><span class="p">;</span>
+<span class="nv">$pass</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$db</span>   <span class="o">=</span> <span class="s2">"db_sekolah"</span><span class="p">;</span>
+
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="nv">$host</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$pass</span><span class="p">,</span> <span class="nv">$db</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$koneksi</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nf">mysqli_connect_error</span><span class="p">());</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi berhasil."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="b-menggunakan-mysqli-oop">b. Menggunakan MySQLi (OOP)</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">mysqli</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"root"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"db_sekolah"</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$koneksi</span><span class="o">-&gt;</span><span class="n">connect_error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nv">$koneksi</span><span class="o">-&gt;</span><span class="n">connect_error</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi berhasil."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h3 id="c-menggunakan-pdo">c. Menggunakan PDO</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nv">$koneksi</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PDO</span><span class="p">(</span><span class="s2">"mysql:host=localhost;dbname=db_sekolah"</span><span class="p">,</span> <span class="s2">"root"</span><span class="p">,</span> <span class="s2">""</span><span class="p">);</span>
+  <span class="nv">$koneksi</span><span class="o">-&gt;</span><span class="nf">setAttribute</span><span class="p">(</span><span class="no">PDO</span><span class="o">::</span><span class="no">ATTR_ERRMODE</span><span class="p">,</span> <span class="no">PDO</span><span class="o">::</span><span class="no">ERRMODE_EXCEPTION</span><span class="p">);</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi berhasil"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nc">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="4-contoh-penggunaan-koneksi">4. Contoh Penggunaan Koneksi</h2>
+
+<p>Menampilkan data dari tabel <code class="language-plaintext highlighter-rouge">siswa</code>:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+
+<span class="nv">$data</span> <span class="o">=</span> <span class="nf">mysqli_query</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">,</span> <span class="s2">"SELECT * FROM siswa"</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nf">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$data</span><span class="p">))</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'nama'</span><span class="p">]</span> <span class="mf">.</span> <span class="s2">"&lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-menutup-koneksi">5. Menutup Koneksi</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">mysqli_close</span><span class="p">(</span><span class="nv">$koneksi</span><span class="p">);</span> <span class="c1">// untuk MySQLi</span>
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>         <span class="c1">// untuk PDO</span>
+</code></pre></div></div>
+
+<h2 id="6-tips">6. Tips</h2>
+
+<ul>
+  <li>Gunakan prepared statement untuk keamanan (hindari SQL Injection)</li>
+  <li>Simpan file koneksi di luar folder publik (htdocs)</li>
+  <li>Pisahkan file koneksi dari file utama untuk efisiensi</li>
+</ul>
+
+<h2 id="7-referensi">7. Referensi</h2>
+
+<ul>
+  <li><a href="https://www.php.net/manual/en/book.mysqli.php">PHP Manual - mysqli</a></li>
+  <li><a href="https://www.w3schools.com/php/php_mysql_connect.asp">W3Schools PHP MySQL Connect</a></li>
+</ul>
+
+</main>
+
+
+
+  </body>
+</html>
+  
+
